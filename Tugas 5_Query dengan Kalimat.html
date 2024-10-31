@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Pencarian dan Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 5_Query dengan Kalimat';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Crawling Artikel (Graph)" href="Tugas%20Crawling%20Artikel.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PAS FOTO.jpg" class="logo__image only-light" alt="Pencarian dan Penambangan Web - Home"/>
+    <img src="_static/PAS FOTO.jpg" class="logo__image only-dark pst-js-only" alt="Pencarian dan Penambangan Web - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas%201%20PPW.html">Konsep Crawling dan Contoh</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202%20PPW.html">Klasifikasi Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="konsep%20word%20embedding.html">Konsep Word Embedding</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tugas%20Crawling%20Artikel.html">Crawling Artikel (Graph)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas 5_Query dengan Kalimat.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Tugas 5_Query dengan Kalimat.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-1-d2ce78bc4518&gt;</span> in <span class="ni">&lt;cell line: 10&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;Sastrawi&#39;
+
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NOTE</span>: If your import is failing due to a missing package, you can
+<span class="n">manually</span> <span class="n">install</span> <span class="n">dependencies</span> <span class="n">using</span> <span class="n">either</span> <span class="o">!</span>pip<span class="w"> </span>or<span class="w"> </span>!apt.
+
+<span class="n">To</span> <span class="n">view</span> <span class="n">examples</span> <span class="n">of</span> <span class="n">installing</span> <span class="n">some</span> <span class="n">common</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">click</span> <span class="n">the</span>
+<span class="s2">&quot;Open Examples&quot;</span> <span class="n">button</span> <span class="n">below</span><span class="o">.</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hasil_stemming_stopwords.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>no_stopwords_text</th>
+      <th>final_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>['detroit', 'kompascom', 'perpustakaan', 'ping...</td>
+      <td>detroit kompascom pustaka pinggir kota detroit...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>['kompascom', 'unggahan', 'media', 'sosial', '...</td>
+      <td>kompascom unggah media sosial sebut petir samb...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>['kompascom', 'penelitian', 'orang', 'dirawat'...</td>
+      <td>kompascom teliti orang rawat rumah sakit infek...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>['kompascom', 'astronot', 'badan', 'penerbanga...</td>
+      <td>kompascom astronot badan terbang antariksa ame...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>['kompascom', 'kelompok', 'hizbullah', 'mengek...</td>
+      <td>kompascom kelompok hizbullah klaim hasil seran...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transformasi TF-IDF</span>
+<span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+
+<span class="c1"># Mengonversi TF-IDF matrix ke dalam DataFrame</span>
+<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+
+<span class="c1"># Menampilkan hasil TF-IDF dalam bentuk DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tfidf_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      ab  abad  abadi  abah  abai  abba  abbas  abbasiyah       abc  abdallah  \
+0    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+1    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+2    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+3    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.048423       0.0   
+4    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+..   ...   ...    ...   ...   ...   ...    ...        ...       ...       ...   
+195  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+196  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+197  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+198  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+199  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
+
+     ...  zelzal  ziad  zimbabwe    zionis  zionisme  zoe  zom  zona  zoologi  \
+0    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+1    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+2    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+3    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+4    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+..   ...     ...   ...       ...       ...       ...  ...  ...   ...      ...   
+195  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+196  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+197  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+198  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+199  ...     0.0   0.0       0.0  0.044361  0.047817  0.0  0.0   0.0      0.0   
+
+     zullies  
+0        0.0  
+1        0.0  
+2        0.0  
+3        0.0  
+4        0.0  
+..       ...  
+195      0.0  
+196      0.0  
+197      0.0  
+198      0.0  
+199      0.0  
+
+[200 rows x 5577 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+
+<span class="c1"># Transformasi SVD</span>
+<span class="n">svd</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Ubah n_components sesuai kebutuhan</span>
+<span class="n">tfidf_svd</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengonversi hasil SVD ke dalam DataFrame</span>
+<span class="n">svd_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tfidf_svd</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svd_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           0         1         2         3         4         5         6   \
+0    0.043425  0.041441  0.065788 -0.022936 -0.031602  0.010439 -0.016268   
+1    0.018521  0.031421  0.070850 -0.056395  0.053905  0.030661  0.021451   
+2    0.039736  0.056609  0.128048 -0.091012 -0.080597  0.033465 -0.037776   
+3    0.048502  0.106017  0.120634  0.002087 -0.069261  0.078663  0.018235   
+4    0.692231 -0.106538 -0.082800  0.024432  0.087990  0.159928 -0.022555   
+..        ...       ...       ...       ...       ...       ...       ...   
+195  0.104197  0.150239  0.058692 -0.053830  0.033772  0.049323 -0.031589   
+196  0.063672  0.074086  0.135042 -0.065495 -0.116664  0.040447 -0.060884   
+197  0.222571  0.626782 -0.276839 -0.041880  0.026438  0.029704  0.014283   
+198  0.160462  0.693644 -0.228035  0.056440  0.072769  0.012950 -0.009780   
+199  0.384101 -0.040512  0.063704 -0.005822 -0.008647 -0.137311  0.019463   
+
+           7         8         9   ...        90        91        92  \
+0   -0.002853  0.021812  0.012008  ... -0.029523 -0.048334  0.046136   
+1    0.000573  0.006372  0.003920  ... -0.018876  0.014243 -0.014065   
+2   -0.075480  0.061857  0.092302  ... -0.038682 -0.018988 -0.063570   
+3   -0.136156 -0.032846  0.420354  ... -0.030259  0.006711  0.089548   
+4    0.005907 -0.069797  0.058815  ... -0.021251  0.034000 -0.023760   
+..        ...       ...       ...  ...       ...       ...       ...   
+195 -0.039099 -0.016911  0.035087  ... -0.081426  0.080316  0.011083   
+196 -0.055007 -0.046294 -0.094325  ...  0.109645 -0.184695  0.064348   
+197 -0.009595  0.069517 -0.013186  ... -0.024020 -0.001346 -0.019602   
+198 -0.000983 -0.034391  0.025116  ... -0.019510  0.005162 -0.001834   
+199  0.027081  0.089019 -0.055053  ... -0.023935  0.013410  0.007196   
+
+           93        94        95        96        97        98        99  
+0    0.016437 -0.012871 -0.115691  0.062607 -0.251632  0.063953 -0.061500  
+1   -0.035858 -0.006624 -0.032463 -0.072719 -0.027608  0.067900 -0.016715  
+2   -0.010875  0.044724  0.011511  0.047028  0.055804 -0.042052  0.070325  
+3    0.024644  0.039298  0.005110  0.022904  0.004786 -0.055899  0.016421  
+4    0.014901 -0.023721  0.011284 -0.007124 -0.019226  0.011211 -0.001365  
+..        ...       ...       ...       ...       ...       ...       ...  
+195 -0.064180 -0.189819 -0.081074  0.047605 -0.032795 -0.024239 -0.095786  
+196  0.215944 -0.150773 -0.100979 -0.073843 -0.161696 -0.022474 -0.124836  
+197  0.034001 -0.016652  0.046966 -0.023759 -0.013072  0.043881  0.021338  
+198  0.027466 -0.036169  0.048326 -0.056827 -0.035590  0.010993  0.001106  
+199  0.073956  0.043859 -0.003563 -0.095176  0.081453  0.006556  0.039171  
+
+[200 rows x 100 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+
+<span class="c1"># Standardisasi hasil SVD</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>  <span class="c1"># Impor yang diperlukan</span>
+<span class="n">ss_svd</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tfidf_svd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengonversi hasil SVD ke dalam DataFrame</span>
+<span class="n">ss_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ss_svd</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ss_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           0         1         2         3         4         5         6   \
+0   -0.636886 -0.199542 -0.115518 -0.128284 -0.248574 -0.035624 -0.147403   
+1   -0.736391 -0.263626 -0.071868 -0.410525  0.480326  0.153689  0.211198   
+2   -0.651624 -0.102534  0.421393 -0.702542 -0.666225  0.179945 -0.351877   
+3   -0.616603  0.213469  0.357461  0.082798 -0.569587  0.603087  0.180618   
+4    1.955421 -1.145980 -1.396913  0.271291  0.770871  1.363896 -0.207171   
+..        ...       ...       ...       ...       ...       ...       ...   
+195 -0.394072  0.496305 -0.176715 -0.388887  0.308699  0.328409 -0.293059   
+196 -0.555990  0.009244  0.481710 -0.487288 -0.973670  0.245308 -0.571566   
+197  0.078891  3.544153 -3.070273 -0.288085  0.246182  0.144735  0.143050   
+198 -0.169266  3.971784 -2.649400  0.541301  0.641124 -0.012117 -0.085725   
+199  0.724285 -0.723696 -0.133494  0.016083 -0.052897 -1.418867  0.192293   
+
+           7         8         9   ...        90        91        92  \
+0    0.007076  0.109052 -0.002681  ... -0.452350 -0.749479  0.702031   
+1    0.039844 -0.042137 -0.084076  ... -0.289784  0.210733 -0.224935   
+2   -0.687567  0.501168  0.805395  ... -0.592195 -0.299188 -0.987212   
+3   -1.267893 -0.426148  4.106912  ... -0.463585  0.095144  1.370476   
+4    0.090856 -0.787968  0.468381  ... -0.326059  0.513890 -0.374214   
+..        ...       ...       ...  ...       ...       ...       ...   
+195 -0.339602 -0.270119  0.229581  ... -1.244833  1.224587  0.162289   
+196 -0.491749 -0.557828 -1.072816  ...  1.672519 -2.841876  0.982456   
+197 -0.057409  0.576169 -0.256231  ... -0.368328 -0.028478 -0.310193   
+198  0.024961 -0.441285  0.129238  ... -0.299477  0.071384 -0.036613   
+199  0.293381  0.767130 -0.677581  ... -0.367030  0.197948  0.102434   
+
+           93        94        95        96        97        98        99  
+0    0.240306 -0.198921 -1.802087  0.969492 -3.957685  1.010068 -1.001409  
+1   -0.568001 -0.101941 -0.507457 -1.143999 -0.434320  1.072261 -0.289153  
+2   -0.181841  0.695248  0.176555  0.726188  0.877560 -0.660424  1.095117  
+3    0.367171  0.611013  0.076995  0.349425  0.075158 -0.878630  0.237832  
+4    0.216567 -0.367378  0.173024 -0.119555 -0.302485  0.178927 -0.045030  
+..        ...       ...       ...       ...       ...       ...       ...  
+195 -1.005767 -2.946078 -1.263613  0.735200 -0.515902 -0.379712 -1.546686  
+196  3.324048 -2.339881 -1.573238 -1.161549 -2.543195 -0.351899 -2.008700  
+197  0.511790 -0.257620  0.728065 -0.379356 -0.205703  0.693759  0.316037  
+198  0.410784 -0.560632  0.749228 -0.895795 -0.559855  0.175495 -0.005736  
+199  1.129373  0.681822 -0.057924 -1.494727  1.280950  0.105568  0.599648  
+
+[200 rows x 100 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fungsi pencarian dokumen</span>
+<span class="k">def</span> <span class="nf">search_documents</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+    <span class="c1"># Transformasi query ke bentuk TF-IDF dan SVD</span>
+    <span class="n">query_tfidf</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">query</span><span class="p">])</span>
+    <span class="n">query_svd</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">query_tfidf</span><span class="p">)</span>
+    <span class="n">query_svd</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">query_svd</span><span class="p">)</span>  <span class="c1"># Standardisasi query</span>
+
+    <span class="c1"># Menghitung cosine similarity antara query dan setiap dokumen</span>
+    <span class="n">similarities</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">query_svd</span><span class="p">,</span> <span class="n">tfidf_svd</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Similarity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">similarities</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Menampilkan 5 dokumen paling mirip</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Similarity&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)[[</span><span class="s1">&#39;final_text&#39;</span><span class="p">,</span> <span class="s1">&#39;Similarity&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">highlight_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+    <span class="c1"># Menggunakan ANSI escape code untuk menyorot teks dengan warna biru</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;34m</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="se">\033</span><span class="s2">[0m&quot;</span><span class="p">)</span>  <span class="c1"># Warna biru</span>
+
+<span class="c1"># Fungsi untuk mencetak hasil pencarian</span>
+<span class="k">def</span> <span class="nf">print_search_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>  <span class="c1"># Periksa apakah DataFrame kosong</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tidak ada hasil yang ditemukan.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Pencarian:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>  <span class="c1"># Iterasi melalui setiap baris DataFrame</span>
+            <span class="n">highlighted_text</span> <span class="o">=</span> <span class="n">highlight_text</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">],</span> <span class="n">query</span><span class="p">)</span>  <span class="c1"># Mengganti &#39;final_text&#39; dengan kolom yang benar</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">highlighted_text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Input query dari pengguna</span>
+<span class="n">query</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan kalimat pencarian: &quot;</span><span class="p">)</span>  <span class="c1"># Meminta pengguna untuk memasukkan query</span>
+<span class="n">search_results</span> <span class="o">=</span> <span class="n">search_documents</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>  <span class="c1"># Mencari dokumen berdasarkan query</span>
+
+<span class="c1"># Mencetak hasil pencarian</span>
+<span class="n">print_search_results</span><span class="p">(</span><span class="n">search_results</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Pencarian:
+55. kompascom jadwal timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia gelar stadion madya senayan jakarta rabu <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> maladewa gabung grup yaman timor leste laga lawan maladewa <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> pasu garuda lolos putar final piala asia china kualifikasi piala asia ikut negara bagi bagi puluh grup masingmasing juara grup runner up baik otomatis lolos piala asia link live streaming siar langsung <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa jadwal kualifikasi piala asia baca latih timnas australia graham arnold mundur singgung hasil seri lawan <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> jalan tanding <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia wib ajang pasu garuda kuat jens raven fc dordrecht fitrah ridwan persib bandung latih <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> indra sjafri panggil namanama aditya warman persija jakarta ton firmansyah baya surabaya rifky tofani malut united <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kuat main andal welber jardim welber jardim panggil kuat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kualifikasi piala asia pssi tiket terbang <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> welber jardim izin klub sao paulo baca syarat timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> lolos piala dunia welber jardim <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> nama coret welber jardim <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kuat striker blitar jawa timur arkhan kaka arkhan absen bela <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> indra tim latih putus bawa jens raven muhammad ragil
+35. kompascom jadwal tanding <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia main malam rabu wib tanding <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa gelar stadion madya senayan jakarta temu tim laga perdana grup <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> yaman timor leste maladewa latih tim <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> indra sjafri optimistis tim raih menang lawan maladewa siap ikut kualifikasi piala asia besok lawan maladewa mudahmudahan lolos piala asia china indra sjafri lansir laman pssi lawan maladewa <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> jumpa timor leste yaman jumat minggu baca link live streaming <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia kick off wib kirim bagi vidio sports vidiosports laga timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia gelar stadion madya senayan jakarta rabu wib tanding timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> lawan maladewa siar langsng televisi swasta sctv wib masyarakat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> saksi laga timas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa platform streaming video vidiocom linknya lawan maladewa timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> lawan timor leste yaman tanding jadwal tanding baca harga link beli tiket timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kualifikasi piala asia
+163. karachi kompascom diplomat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> diplomat negara dampak ledak bom sasar konvoi diplomat asing pakistan barat laut minggu beruntug selamat polisi lapor tewas luka bom pinggir jalan ledak bahan ledak ledak jarak sasar kendara aman awal iringiringan diplomat asing lintas lembah swat baca temu minyak besarbesaran pakistan besar dunia potensi ubah haluan ekonomi siar stasiun televisi lokal geo news diplomat asal <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> rusia bosniaherzegovina vietnam ethiopia rwanda zimbabwe uzbekistan turkmenistan kazakhstan portugal selamat ledak bom pakistan diplomat aman islamabad kepala polisi distrik zahidullah khan wartawan lansir kutip anadolu diplomat asing pakistan jalan mallam jabba destinasi wisata lembah hadir acara kamar dagang industri lokal mingora kota swat rekam tayang geo news kendara aman rusak jalan mallam jabba pasu aman tutup akses area berita tayang klaim tanggung ledak bom polisi pakistan luncur lidi kait insiden lembah swat pusat keras operasi militer besarbesaran hasil bongkar jaring militan kait kelompok tehreeketaliban pakistan baca anggota separatis bunuh orang pakistan tuju pisah direktur asia selatan menteri negeri ri jatmiko heru prasetyo sebut diplomat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> rombong serang untung diplomat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> wakil negara asing rombong selamat serang bom kawasan malam jabba provinsi khyber pakhtunkhwa  penuh undang hadir tourism summit swat industrial chamber of commerce  jatmiko jakarta senin kutip kompasid
+181. den haag kompascom menteri negeri <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> retno marsudi abadi nama bunga tulip belanda senin seremoni beri nama kunjung retno den haag belanda langsung menteri negeri belanda caspar veldkamp menlu belanda retno peran hubung bilateral kuat negara baca retno marsudi utus khusus sekjen pbb <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> retno marsudi kolega <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kenal negara ajar belanda duta perempuan <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> den haag tugas menteri negeri tulis veldkamp instagram post shared by caspar veldkamp ministerbz bunga tulip retno marsudi warna merahputih sesuai bendera <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> menlu retno anugerah lambang hormat golden order of rit harga jasajasanya hubung kerja luas bidang politik ekonomi budaya veldkamp libat pribadi raya harihari nasional masingmasing menteri marsudi hadir raya raja duta jakarta pekan hadir raya merdeka <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> den haag imbuh baca ktt oki gambia menlu retno negara anggota oki utang merdeka rakyat palestina retno hormat terima golden order of rit menteri negeri belanda sanjung menlu caspar veldkamp memberitahu tulip nama tulip merah putih nama  retno marsudi  tulis instagram terima kasih kejut senang menlu retno post shared by retno marsudi retnomarsudi baca menlu retno walk out dubes israel nyata debat buka dk pbb
+123. kompascom wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> potensi alami hujan pek iring masuk musim hujan wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> badan meteorologi klimatologi geofisika bmkg rilis potensi cuaca <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> rabu september senin september analisa bmkg wilayah pulau jawa alami lembap udara relatif tingkat potensi hujan analisis pantau bmkg pek curah hujan wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> utara tulis bmkg unggah akun instagram resmi infobmkg senin potensi hujan wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> sebab udara lembap bawa samudera hindia tambah suhu muka laut hangat dukung bentuk awan konvektif barat jawa kondisi cipta peluang hujan intensitas ringan serta petir daerah sore malam tulis bmkg alir udara monsun timur kering lembap picu tingkat intensitas curah hujan wilayah jawa baca prakira bmkg wilayah potensi hujan september kombinasi fenomena dinamika atmosfer sebab hujan intensitas lebat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> angin kencang wilayah sebar wilayah potensi hujan sedanglebat serta petir angin kencang wilayah potensi angin kencang baca jatengdiy masuk musim hujan jelas bmkg
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas%20Crawling%20Artikel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Crawling Artikel (Graph)</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dohan Rizqi Hadityo 210411100195
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

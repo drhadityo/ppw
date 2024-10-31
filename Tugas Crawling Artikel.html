@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -36,10 +38,11 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -60,9 +63,11 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas Crawling Artikel';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Tugas%205_Query%20dengan%20Kalimat.html" />
     <link rel="prev" title="Konsep Word Embedding" href="konsep%20word%20embedding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -78,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -98,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -106,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -123,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -153,21 +147,17 @@
     
     
     <img src="_static/PAS FOTO.jpg" class="logo__image only-light" alt="Pencarian dan Penambangan Web - Home"/>
-    <script>document.write(`<img src="_static/PAS FOTO.jpg" class="logo__image only-dark" alt="Pencarian dan Penambangan Web - Home"/>`);</script>
+    <img src="_static/PAS FOTO.jpg" class="logo__image only-dark pst-js-only" alt="Pencarian dan Penambangan Web - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -341,24 +331,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -454,7 +436,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-85e7caa0-c670-4c00-85de-0d016b226f9e" class="colab-df-container">
+  <div id="df-b0946d26-660a-4adc-bd52-a06772a32106" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -491,7 +473,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-85e7caa0-c670-4c00-85de-0d016b226f9e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b0946d26-660a-4adc-bd52-a06772a32106')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -543,12 +525,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-85e7caa0-c670-4c00-85de-0d016b226f9e button.colab-df-convert');
+        document.querySelector('#df-b0946d26-660a-4adc-bd52-a06772a32106 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-85e7caa0-c670-4c00-85de-0d016b226f9e');
+        const element = document.querySelector('#df-b0946d26-660a-4adc-bd52-a06772a32106');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -609,7 +591,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-939d30a2-a639-4b08-9749-9b146896755a" class="colab-df-container">
+  <div id="df-33938e13-4ca6-47e8-adc6-bcd2b21c8037" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -646,7 +628,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-939d30a2-a639-4b08-9749-9b146896755a')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-33938e13-4ca6-47e8-adc6-bcd2b21c8037')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -698,12 +680,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-939d30a2-a639-4b08-9749-9b146896755a button.colab-df-convert');
+        document.querySelector('#df-33938e13-4ca6-47e8-adc6-bcd2b21c8037 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-939d30a2-a639-4b08-9749-9b146896755a');
+        const element = document.querySelector('#df-33938e13-4ca6-47e8-adc6-bcd2b21c8037');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -750,7 +732,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0bea3fd5-c4c3-4e5d-8092-c34ac3a521c7" class="colab-df-container">
+  <div id="df-f67bda19-97ca-446e-b282-bb66fd4a7685" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -787,7 +769,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0bea3fd5-c4c3-4e5d-8092-c34ac3a521c7')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f67bda19-97ca-446e-b282-bb66fd4a7685')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -839,12 +821,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0bea3fd5-c4c3-4e5d-8092-c34ac3a521c7 button.colab-df-convert');
+        document.querySelector('#df-f67bda19-97ca-446e-b282-bb66fd4a7685 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0bea3fd5-c4c3-4e5d-8092-c34ac3a521c7');
+        const element = document.querySelector('#df-f67bda19-97ca-446e-b282-bb66fd4a7685');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -900,7 +882,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-47183e27-1aca-4915-b806-6a27b6d924ef" class="colab-df-container">
+  <div id="df-f692a174-85e1-4965-9345-346bdd266cb4" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -937,7 +919,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-47183e27-1aca-4915-b806-6a27b6d924ef')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f692a174-85e1-4965-9345-346bdd266cb4')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -989,12 +971,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-47183e27-1aca-4915-b806-6a27b6d924ef button.colab-df-convert');
+        document.querySelector('#df-f692a174-85e1-4965-9345-346bdd266cb4 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-47183e27-1aca-4915-b806-6a27b6d924ef');
+        const element = document.querySelector('#df-f692a174-85e1-4965-9345-346bdd266cb4');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1027,7 +1009,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping tokenizers/punkt.zip.
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1040,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4c6899fd-c3f4-4327-99b0-abfb4ae607d5" class="colab-df-container">
+  <div id="df-6d21a866-0843-419a-83ac-951b3da599b8" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1186,7 +1170,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-4c6899fd-c3f4-4327-99b0-abfb4ae607d5')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6d21a866-0843-419a-83ac-951b3da599b8')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1238,12 +1222,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-4c6899fd-c3f4-4327-99b0-abfb4ae607d5 button.colab-df-convert');
+        document.querySelector('#df-6d21a866-0843-419a-83ac-951b3da599b8 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-4c6899fd-c3f4-4327-99b0-abfb4ae607d5');
+        const element = document.querySelector('#df-6d21a866-0843-419a-83ac-951b3da599b8');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1366,7 +1350,21 @@ Total jumlah term: 351
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packages (1.0.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl.metadata (909 bytes)
+Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">92.2/209.7 kB</span> <span class=" -Color -Color-Red">2.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">3.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: Sastrawi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 </div>
@@ -1532,7 +1530,7 @@ Total jumlah term: 351
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/49b0d89b8f49fe2300178d30f4a6d6a61fe4ec3015f6bbfaa28a303b01ce14ec.png" src="_images/49b0d89b8f49fe2300178d30f4a6d6a61fe4ec3015f6bbfaa28a303b01ce14ec.png" />
+<img alt="_images/9fd1f2c333d2e220b5c22daf7e27a241d0fac6e8fc13fbf6d681f6cb1ae7a44f.png" src="_images/9fd1f2c333d2e220b5c22daf7e27a241d0fac6e8fc13fbf6d681f6cb1ae7a44f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2676,7 +2674,7 @@ Setelah merasakan kekuatan Manchester United, k...                              
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/831cd7b6f6bdac79465c7e0fb94a3164f8731d9f7db88b8f715e0d8baad076ca.png" src="_images/831cd7b6f6bdac79465c7e0fb94a3164f8731d9f7db88b8f715e0d8baad076ca.png" />
+<img alt="_images/799701f255f733ea2afc4a9d7cb42814819048e2a85bf06a8dffa3b9b49ba746.png" src="_images/799701f255f733ea2afc4a9d7cb42814819048e2a85bf06a8dffa3b9b49ba746.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah node: 20
 Jumlah edge: 128
 Apakah graf terhubung? True
@@ -2725,8 +2723,9 @@ Ukuran Sentralitas:
 16              0.633333                0.003279  
 0               0.612903                0.002947  
 15              0.452381                0.000000  
-
-5 kalimat teratas berdasarkan Degree Centrality:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 kalimat teratas berdasarkan Degree Centrality:
                                               Kalimat  Degree Centrality
 2   Baca Juga: Hilgers dan Reijnders Bisa Debut sa...           0.894737
 3   Bersua Mourinho dan Feyenoord jadi bekal besar...           0.842105
@@ -2795,6 +2794,15 @@ Ukuran Sentralitas:
         <p class="prev-next-title">Konsep Word Embedding</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Tugas%205_Query%20dengan%20Kalimat.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -2802,7 +2810,8 @@ Ukuran Sentralitas:
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -2862,8 +2871,8 @@ By Dohan Rizqi Hadityo 210411100195
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
