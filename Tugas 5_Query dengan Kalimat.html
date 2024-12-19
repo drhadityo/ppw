@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,10 +39,10 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 5_Query dengan Kalimat';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Tugas%207_Clustering%20berita.html" />
     <link rel="prev" title="Crawling Artikel (Graph)" href="Tugas%20Crawling%20Artikel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -171,6 +172,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201%20PPW.html">Konsep Crawling dan Contoh</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202%20PPW.html">Klasifikasi Berita</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="konsep%20word%20embedding.html">Konsep Word Embedding</a></li>
 
 
@@ -184,9 +186,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -458,8 +465,8 @@
     </tr>
     <tr>
       <th>2</th>
-      <td>['kompascom', 'penelitian', 'orang', 'dirawat'...</td>
-      <td>kompascom teliti orang rawat rumah sakit infek...</td>
+      <td>['kompascompenelitian', 'orang', 'dirawat', 'r...</td>
+      <td>kompascompenelitian orang rawat rumah sakit in...</td>
     </tr>
     <tr>
       <th>3</th>
@@ -502,7 +509,7 @@
 0    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
 1    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
 2    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
-3    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.048423       0.0   
+3    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.048416       0.0   
 4    0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
 ..   ...   ...    ...   ...   ...   ...    ...        ...       ...       ...   
 195  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
@@ -512,17 +519,17 @@
 199  0.0   0.0    0.0   0.0   0.0   0.0    0.0        0.0  0.000000       0.0   
 
      ...  zelzal  ziad  zimbabwe    zionis  zionisme  zoe  zom  zona  zoologi  \
-0    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-1    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-2    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-3    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-4    ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
+0    ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+1    ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+2    ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+3    ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+4    ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
 ..   ...     ...   ...       ...       ...       ...  ...  ...   ...      ...   
-195  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-196  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-197  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-198  ...     0.0   0.0       0.0  0.000000  0.000000  0.0  0.0   0.0      0.0   
-199  ...     0.0   0.0       0.0  0.044361  0.047817  0.0  0.0   0.0      0.0   
+195  ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+196  ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+197  ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+198  ...     0.0   0.0       0.0  0.000000   0.00000  0.0  0.0   0.0      0.0   
+199  ...     0.0   0.0       0.0  0.044188   0.04763  0.0  0.0   0.0      0.0   
 
      zullies  
 0        0.0  
@@ -537,7 +544,7 @@
 198      0.0  
 199      0.0  
 
-[200 rows x 5577 columns]
+[200 rows x 5723 columns]
 </pre></div>
 </div>
 </div>
@@ -565,43 +572,43 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           0         1         2         3         4         5         6   \
-0    0.043425  0.041441  0.065788 -0.022936 -0.031602  0.010439 -0.016268   
-1    0.018521  0.031421  0.070850 -0.056395  0.053905  0.030661  0.021451   
-2    0.039736  0.056609  0.128048 -0.091012 -0.080597  0.033465 -0.037776   
-3    0.048502  0.106017  0.120634  0.002087 -0.069261  0.078663  0.018235   
-4    0.692231 -0.106538 -0.082800  0.024432  0.087990  0.159928 -0.022555   
+0    0.043577  0.041739  0.066040 -0.023909 -0.030141  0.011116 -0.016536   
+1    0.018598  0.031937  0.071101 -0.053609  0.056459  0.030450  0.021517   
+2    0.040069  0.056777  0.126976 -0.092625 -0.075851  0.030802 -0.038824   
+3    0.048604  0.106513  0.119786  0.001368 -0.067643  0.073796  0.017804   
+4    0.685225 -0.104113 -0.079710  0.023793  0.085958  0.143765 -0.022649   
 ..        ...       ...       ...       ...       ...       ...       ...   
-195  0.104197  0.150239  0.058692 -0.053830  0.033772  0.049323 -0.031589   
-196  0.063672  0.074086  0.135042 -0.065495 -0.116664  0.040447 -0.060884   
-197  0.222571  0.626782 -0.276839 -0.041880  0.026438  0.029704  0.014283   
-198  0.160462  0.693644 -0.228035  0.056440  0.072769  0.012950 -0.009780   
-199  0.384101 -0.040512  0.063704 -0.005822 -0.008647 -0.137311  0.019463   
+195  0.104389  0.151251  0.057187 -0.050524  0.036989  0.048001 -0.032634   
+196  0.063625  0.073782  0.135592 -0.069952 -0.113626  0.040094 -0.060969   
+197  0.220509  0.627354 -0.283774 -0.041513  0.030159  0.035430  0.007761   
+198  0.160499  0.689712 -0.231228  0.060307  0.070951  0.011297 -0.006499   
+199  0.383257 -0.040946  0.061770 -0.007076 -0.008376 -0.133463  0.019348   
 
            7         8         9   ...        90        91        92  \
-0   -0.002853  0.021812  0.012008  ... -0.029523 -0.048334  0.046136   
-1    0.000573  0.006372  0.003920  ... -0.018876  0.014243 -0.014065   
-2   -0.075480  0.061857  0.092302  ... -0.038682 -0.018988 -0.063570   
-3   -0.136156 -0.032846  0.420354  ... -0.030259  0.006711  0.089548   
-4    0.005907 -0.069797  0.058815  ... -0.021251  0.034000 -0.023760   
+0   -0.002050  0.021096  0.011992  ...  0.039551  0.120197 -0.075784   
+1   -0.000986  0.007833  0.003803  ... -0.030597 -0.045189 -0.016996   
+2   -0.071044  0.064304  0.079694  ... -0.025150 -0.036980 -0.032778   
+3   -0.140866 -0.021104  0.396229  ... -0.047877  0.056374  0.002381   
+4    0.005647 -0.071289  0.060827  ...  0.000476 -0.041846  0.054472   
 ..        ...       ...       ...  ...       ...       ...       ...   
-195 -0.039099 -0.016911  0.035087  ... -0.081426  0.080316  0.011083   
-196 -0.055007 -0.046294 -0.094325  ...  0.109645 -0.184695  0.064348   
-197 -0.009595  0.069517 -0.013186  ... -0.024020 -0.001346 -0.019602   
-198 -0.000983 -0.034391  0.025116  ... -0.019510  0.005162 -0.001834   
-199  0.027081  0.089019 -0.055053  ... -0.023935  0.013410  0.007196   
+195 -0.040860 -0.014676  0.035026  ... -0.070471 -0.107698  0.071862   
+196 -0.058300 -0.046875 -0.091949  ...  0.214207 -0.025515 -0.126824   
+197 -0.003302  0.061581 -0.014703  ... -0.037781 -0.041526  0.029620   
+198 -0.006113 -0.031203  0.029205  ... -0.000433 -0.038978  0.004329   
+199  0.034628  0.077790 -0.045975  ... -0.047976  0.019985  0.000889   
 
            93        94        95        96        97        98        99  
-0    0.016437 -0.012871 -0.115691  0.062607 -0.251632  0.063953 -0.061500  
-1   -0.035858 -0.006624 -0.032463 -0.072719 -0.027608  0.067900 -0.016715  
-2   -0.010875  0.044724  0.011511  0.047028  0.055804 -0.042052  0.070325  
-3    0.024644  0.039298  0.005110  0.022904  0.004786 -0.055899  0.016421  
-4    0.014901 -0.023721  0.011284 -0.007124 -0.019226  0.011211 -0.001365  
+0   -0.091187  0.066586  0.175476  0.122025 -0.205309 -0.143235 -0.010640  
+1   -0.030673 -0.026852  0.015849  0.038516  0.027917 -0.018464 -0.011071  
+2    0.049084  0.131199 -0.039443 -0.050089  0.004514 -0.073215  0.087214  
+3    0.000958 -0.023350  0.013082 -0.015035 -0.024983  0.011760  0.016377  
+4    0.054274 -0.023074  0.006247 -0.030137  0.019441  0.004008  0.010765  
 ..        ...       ...       ...       ...       ...       ...       ...  
-195 -0.064180 -0.189819 -0.081074  0.047605 -0.032795 -0.024239 -0.095786  
-196  0.215944 -0.150773 -0.100979 -0.073843 -0.161696 -0.022474 -0.124836  
-197  0.034001 -0.016652  0.046966 -0.023759 -0.013072  0.043881  0.021338  
-198  0.027466 -0.036169  0.048326 -0.056827 -0.035590  0.010993  0.001106  
-199  0.073956  0.043859 -0.003563 -0.095176  0.081453  0.006556  0.039171  
+195 -0.182956  0.035162  0.075458 -0.077995 -0.011133 -0.030243  0.105511  
+196  0.124710  0.058661  0.127973  0.043572 -0.176214 -0.122903 -0.112871  
+197  0.050464  0.002357 -0.022966  0.040823  0.043383  0.012533  0.059388  
+198 -0.012182 -0.047873 -0.032917  0.011857  0.032417 -0.026098  0.082539  
+199  0.044579 -0.009454 -0.103886  0.037043  0.091768 -0.068333 -0.014266  
 
 [200 rows x 100 columns]
 </pre></div>
@@ -632,43 +639,43 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           0         1         2         3         4         5         6   \
-0   -0.636886 -0.199542 -0.115518 -0.128284 -0.248574 -0.035624 -0.147403   
-1   -0.736391 -0.263626 -0.071868 -0.410525  0.480326  0.153689  0.211198   
-2   -0.651624 -0.102534  0.421393 -0.702542 -0.666225  0.179945 -0.351877   
-3   -0.616603  0.213469  0.357461  0.082798 -0.569587  0.603087  0.180618   
-4    1.955421 -1.145980 -1.396913  0.271291  0.770871  1.363896 -0.207171   
+0   -0.637051 -0.199912 -0.111155 -0.139405 -0.240464 -0.027601 -0.148562   
+1   -0.736946 -0.262776 -0.067519 -0.389917  0.497416  0.153494  0.213243   
+2   -0.651080 -0.103460  0.414223 -0.719007 -0.629937  0.156784 -0.360481   
+3   -0.616946  0.215530  0.352228  0.073811 -0.560000  0.559480  0.177936   
+4    1.929038 -1.135363 -1.367774  0.262956  0.748760  1.214834 -0.206683   
 ..        ...       ...       ...       ...       ...       ...       ...   
-195 -0.394072  0.496305 -0.176715 -0.388887  0.308699  0.328409 -0.293059   
-196 -0.555990  0.009244  0.481710 -0.487288 -0.973670  0.245308 -0.571566   
-197  0.078891  3.544153 -3.070273 -0.288085  0.246182  0.144735  0.143050   
-198 -0.169266  3.971784 -2.649400  0.541301  0.641124 -0.012117 -0.085725   
-199  0.724285 -0.723696 -0.133494  0.016083 -0.052897 -1.418867  0.192293   
+195 -0.393849  0.502465 -0.187478 -0.363897  0.331521  0.317881 -0.301625   
+196 -0.556874  0.005601  0.488503 -0.527767 -0.951808  0.243821 -0.571031   
+197  0.070541  3.556057 -3.127155 -0.287885  0.273324  0.200133  0.082451   
+198 -0.169454  3.956000 -2.674122  0.570953  0.620898 -0.025900 -0.053138   
+199  0.721403 -0.730233 -0.147972  0.002580 -0.055012 -1.381769  0.192618   
 
            7         8         9   ...        90        91        92  \
-0    0.007076  0.109052 -0.002681  ... -0.452350 -0.749479  0.702031   
-1    0.039844 -0.042137 -0.084076  ... -0.289784  0.210733 -0.224935   
-2   -0.687567  0.501168  0.805395  ... -0.592195 -0.299188 -0.987212   
-3   -1.267893 -0.426148  4.106912  ... -0.463585  0.095144  1.370476   
-4    0.090856 -0.787968  0.468381  ... -0.326059  0.513890 -0.374214   
+0    0.016432  0.099852 -0.001695  ...  0.630098  1.845829 -1.178974   
+1    0.026607 -0.030182 -0.084027  ... -0.440867 -0.695621 -0.271275   
+2   -0.643274  0.523490  0.679010  ... -0.357712 -0.569473 -0.514952   
+3   -1.310889 -0.313902  3.861592  ... -0.704698  0.865070  0.027905   
+4    0.090025 -0.805944  0.489321  ...  0.033535 -0.644249  0.832211   
 ..        ...       ...       ...  ...       ...       ...       ...   
-195 -0.339602 -0.270119  0.229581  ... -1.244833  1.224587  0.162289   
-196 -0.491749 -0.557828 -1.072816  ...  1.672519 -2.841876  0.982456   
-197 -0.057409  0.576169 -0.256231  ... -0.368328 -0.028478 -0.310193   
-198  0.024961 -0.441285  0.129238  ... -0.299477  0.071384 -0.036613   
-199  0.293381  0.767130 -0.677581  ... -0.367030  0.197948  0.102434   
+195 -0.354660 -0.250879  0.229898  ... -1.049647 -1.656189  1.100726   
+196 -0.521414 -0.566573 -1.046759  ...  3.296635 -0.393294 -1.967059   
+197  0.004459  0.496794 -0.270094  ... -0.550556 -0.639327  0.448492   
+198 -0.022421 -0.412913  0.171374  ...  0.019650 -0.600176  0.057993   
+199  0.367143  0.655714 -0.584517  ... -0.706204  0.305898  0.004876   
 
            93        94        95        96        97        98        99  
-0    0.240306 -0.198921 -1.802087  0.969492 -3.957685  1.010068 -1.001409  
-1   -0.568001 -0.101941 -0.507457 -1.143999 -0.434320  1.072261 -0.289153  
-2   -0.181841  0.695248  0.176555  0.726188  0.877560 -0.660424  1.095117  
-3    0.367171  0.611013  0.076995  0.349425  0.075158 -0.878630  0.237832  
-4    0.216567 -0.367378  0.173024 -0.119555 -0.302485  0.178927 -0.045030  
+0   -1.426865  1.037663  2.726923  1.895716 -3.231139 -2.240924 -0.177700  
+1   -0.490685 -0.413281  0.245800  0.590089  0.435485 -0.276658 -0.184599  
+2    0.743195  2.040993 -0.613623 -0.795197  0.067556 -1.138590  1.388346  
+3   -0.001333 -0.358902  0.202791 -0.247149 -0.396180  0.199170  0.254682  
+4    0.823488 -0.354615  0.096553 -0.483264  0.302224  0.077122  0.164866  
 ..        ...       ...       ...       ...       ...       ...       ...  
-195 -1.005767 -2.946078 -1.263613  0.735200 -0.515902 -0.379712 -1.546686  
-196  3.324048 -2.339881 -1.573238 -1.161549 -2.543195 -0.351899 -2.008700  
-197  0.511790 -0.257620  0.728065 -0.379356 -0.205703  0.693759  0.316037  
-198  0.410784 -0.560632  0.749228 -0.895795 -0.559855  0.175495 -0.005736  
-199  1.129373  0.681822 -0.057924 -1.494727  1.280950  0.105568  0.599648  
+195 -2.846597  0.549695  1.172320 -1.231504 -0.178427 -0.462088  1.681157  
+196  1.913177  0.914602  1.988573  0.669151 -2.773722 -1.920833 -1.813786  
+197  0.764544  0.040295 -0.357505  0.626167  0.678623  0.211329  0.943018  
+198 -0.204621 -0.739700 -0.512177  0.173303  0.506228 -0.396833  1.313516  
+199  0.673503 -0.143118 -1.615268  0.567072  1.439298 -1.061743 -0.235726  
 
 [200 rows x 100 columns]
 </pre></div>
@@ -723,11 +730,11 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Pencarian:
-55. kompascom jadwal timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia gelar stadion madya senayan jakarta rabu <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> maladewa gabung grup yaman timor leste laga lawan maladewa <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> pasu garuda lolos putar final piala asia china kualifikasi piala asia ikut negara bagi bagi puluh grup masingmasing juara grup runner up baik otomatis lolos piala asia link live streaming siar langsung <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa jadwal kualifikasi piala asia baca latih timnas australia graham arnold mundur singgung hasil seri lawan <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> jalan tanding <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia wib ajang pasu garuda kuat jens raven fc dordrecht fitrah ridwan persib bandung latih <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> indra sjafri panggil namanama aditya warman persija jakarta ton firmansyah baya surabaya rifky tofani malut united <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kuat main andal welber jardim welber jardim panggil kuat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kualifikasi piala asia pssi tiket terbang <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> welber jardim izin klub sao paulo baca syarat timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> lolos piala dunia welber jardim <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> nama coret welber jardim <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kuat striker blitar jawa timur arkhan kaka arkhan absen bela <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> indra tim latih putus bawa jens raven muhammad ragil
-35. kompascom jadwal tanding <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia main malam rabu wib tanding <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa gelar stadion madya senayan jakarta temu tim laga perdana grup <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> yaman timor leste maladewa latih tim <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> indra sjafri optimistis tim raih menang lawan maladewa siap ikut kualifikasi piala asia besok lawan maladewa mudahmudahan lolos piala asia china indra sjafri lansir laman pssi lawan maladewa <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> jumpa timor leste yaman jumat minggu baca link live streaming <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia kick off wib kirim bagi vidio sports vidiosports laga timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa kualifikasi piala asia gelar stadion madya senayan jakarta rabu wib tanding timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> lawan maladewa siar langsng televisi swasta sctv wib masyarakat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> saksi laga timas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> vs maladewa platform streaming video vidiocom linknya lawan maladewa timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> lawan timor leste yaman tanding jadwal tanding baca harga link beli tiket timnas <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kualifikasi piala asia
-163. karachi kompascom diplomat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> diplomat negara dampak ledak bom sasar konvoi diplomat asing pakistan barat laut minggu beruntug selamat polisi lapor tewas luka bom pinggir jalan ledak bahan ledak ledak jarak sasar kendara aman awal iringiringan diplomat asing lintas lembah swat baca temu minyak besarbesaran pakistan besar dunia potensi ubah haluan ekonomi siar stasiun televisi lokal geo news diplomat asal <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> rusia bosniaherzegovina vietnam ethiopia rwanda zimbabwe uzbekistan turkmenistan kazakhstan portugal selamat ledak bom pakistan diplomat aman islamabad kepala polisi distrik zahidullah khan wartawan lansir kutip anadolu diplomat asing pakistan jalan mallam jabba destinasi wisata lembah hadir acara kamar dagang industri lokal mingora kota swat rekam tayang geo news kendara aman rusak jalan mallam jabba pasu aman tutup akses area berita tayang klaim tanggung ledak bom polisi pakistan luncur lidi kait insiden lembah swat pusat keras operasi militer besarbesaran hasil bongkar jaring militan kait kelompok tehreeketaliban pakistan baca anggota separatis bunuh orang pakistan tuju pisah direktur asia selatan menteri negeri ri jatmiko heru prasetyo sebut diplomat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> rombong serang untung diplomat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> wakil negara asing rombong selamat serang bom kawasan malam jabba provinsi khyber pakhtunkhwa  penuh undang hadir tourism summit swat industrial chamber of commerce  jatmiko jakarta senin kutip kompasid
-181. den haag kompascom menteri negeri <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> retno marsudi abadi nama bunga tulip belanda senin seremoni beri nama kunjung retno den haag belanda langsung menteri negeri belanda caspar veldkamp menlu belanda retno peran hubung bilateral kuat negara baca retno marsudi utus khusus sekjen pbb <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> retno marsudi kolega <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> kenal negara ajar belanda duta perempuan <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> den haag tugas menteri negeri tulis veldkamp instagram post shared by caspar veldkamp ministerbz bunga tulip retno marsudi warna merahputih sesuai bendera <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> menlu retno anugerah lambang hormat golden order of rit harga jasajasanya hubung kerja luas bidang politik ekonomi budaya veldkamp libat pribadi raya harihari nasional masingmasing menteri marsudi hadir raya raja duta jakarta pekan hadir raya merdeka <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> den haag imbuh baca ktt oki gambia menlu retno negara anggota oki utang merdeka rakyat palestina retno hormat terima golden order of rit menteri negeri belanda sanjung menlu caspar veldkamp memberitahu tulip nama tulip merah putih nama  retno marsudi  tulis instagram terima kasih kejut senang menlu retno post shared by retno marsudi retnomarsudi baca menlu retno walk out dubes israel nyata debat buka dk pbb
-123. kompascom wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> potensi alami hujan pek iring masuk musim hujan wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> badan meteorologi klimatologi geofisika bmkg rilis potensi cuaca <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> rabu september senin september analisa bmkg wilayah pulau jawa alami lembap udara relatif tingkat potensi hujan analisis pantau bmkg pek curah hujan wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> utara tulis bmkg unggah akun instagram resmi infobmkg senin potensi hujan wilayah <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> sebab udara lembap bawa samudera hindia tambah suhu muka laut hangat dukung bentuk awan konvektif barat jawa kondisi cipta peluang hujan intensitas ringan serta petir daerah sore malam tulis bmkg alir udara monsun timur kering lembap picu tingkat intensitas curah hujan wilayah jawa baca prakira bmkg wilayah potensi hujan september kombinasi fenomena dinamika atmosfer sebab hujan intensitas lebat <span class=" -Color -Color-Bold -Color-Bold-Blue">indonesia</span> angin kencang wilayah sebar wilayah potensi hujan sedanglebat serta petir angin kencang wilayah potensi angin kencang baca jatengdiy masuk musim hujan jelas bmkg
+122. kompascom badan meteorologi klimatologi geofisika bmkg prediksi wilayah jawa barat jabar pasuk alih musim kemarau musim hujan september kepala bmkg bandung teguh rahayu ayu wilayah jawa barat pasuk musim hujan oktober november peta prediksi musim hujan musim hujan oktober november ayu kompascom senin ayu september transisi musim hujan wilayah jawa barat baca warganet keluh jateng panas musim hujan bmkg ayu jabar masuk musim hujan oktober wilayah pasuk musim hujan rinciannya zona musim zom jawa barat pasuk musim hujan d<span class=" -Color -Color-Bold -Color-Bold-Blue">aerah kabupaten bogor kota depok raya masuk musim hujan dasarian ii iii september oktober musim hujan zom november tambah zom alami musim hujan rincian prediksi musim hujan jawa barat musim hujan prediksi milik karakteristik sifat normal normal an zom milik karakteristik hujan sifat zom jawa barat karakteristik hujan sifat an baca jatengdiy masuk musim hujan jelas bmkg kepala bmkg dwikorita karnawati sebut musim hujan indonesia wilayah indonesia agustus wilayah indonesia pasuk musim hujan september oktober november beda musim hujan indonesia variasi curah hujan sama variasi pola curah hujan indonesia sebab musim hujan sama dwikorita kutip youtube bmkg daftar</span> wilayah masuk musim hujan indonesia baca bmkg musim hujan mundur wilayah indonesia daftar
+109. kompascom badan meteorologi klimatologi geofisika bmkg stasiun klimatologi jawa jateng prediksi musim hujan jateng oktober kepala bmkg stasiun klimatologi jateng sukasno sifat musim hujan jateng normal zona musim zom persen wilayah normal zom sebelas persen wilayah terang resmi terima kompascom senin sukasno durasi musim hujan jateng dasarian zom persen wilayah alami musim hujan dasarian zom persen wilayah dasarian zom persen wilayah alami durasi musim hujan dasarian zom persen wilayah dasarian baca indonesia masuk musim hujan jelas bmkg bmkg prediksi musim hujan jateng oktober wilayah prediksi alami musim hujan september november wilayah jateng masuk musim hujan septembernovember baca bmkg mayoritas wilayah indonesia alami musim hujan maju daftar dasar prakira bmkg musim hujan wilayah jateng prediksi maju mundur normal simak daftar wilayah jateng masuk musim hujan maju mundur wilayah jateng musim hujan maju mundur
+123. kompascom wilayah indonesia potensi alami hujan pek iring masuk musim hujan wilayah indonesia badan meteorologi klimatologi geofisika bmkg rilis potensi cuaca indonesia rabu september senin september analisa bmkg wilayah pulau jawa alami lembap udara relatif tingkat potensi hujan analisis pantau bmkg pek curah hujan wilayah indonesia utara tulis bmkg unggah akun instagram resmi infobmkg senin potensi hujan wilayah indonesia sebab udara lembap bawa samudera hindia tambah suhu muka laut hangat dukung bentuk awan konvektif barat jawa kondisi cipta peluang hujan intensitas ringan serta petir daerah sore malam tulis bmkg alir udara monsun timur kering lembap picu tingkat intensitas curah hujan wilayah jawa baca prakira bmkg wilayah potensi hujan september kombinasi fenomena dinamika atmosfer sebab hujan intensitas lebat indonesia angin kencang wilayah sebar wilayah potensi hujan sedanglebat serta petir angin kencang wilayah potensi angin kencang baca jatengdiy masuk musim hujan jelas bmkg
+75. kompascom badan meteorologi klimatologi geofisika bmkg ungkap daftar wilayah potensi hujan lebat rabu kamis bmkg potensi hujan lebat aktivitas gelombang rossby ekuatorial kelvin aktivitas gelombang rossby ekuatorial prediksi aktif wilayah aceh sumatera selatan lampung jawa yogyakarta jawa timur nusa tenggara barat nusa tenggara timur kalimantan barat papua barat papua papua gunung gelombang kelvin prediksi aktif wilayah aceh bengkulu sumatera selatan bibit siklon tropis pantau laut china selatan bentuk daerah temu angin klonfluensi panjang laut china selatan daerah konfluensi pantau samudra hindia barat bengkulu laut jawa laut sulawesi baca bmkg musim hujan wilayah jateng maju mundur daftar sirkulasi siklonik pantau samudra pasifik utara malu utara bentuk daerah lambat cepat angin konvergensi panjang papua barat selatan utara daerah konvergensi pantau panjang pesisir barat kalimantan barat laut natuna pesisir selatan jawa timur jawa kalimantan utara laut timor nusa tenggara timur air timur sulawesi sulawesi selatan kondisi tingkat potensi tumbuh awan hujan bibit siklon tropis konvergensi bunyi terang bmkg bmkg muncul tingkat cepat angin capai knot pantau laut andam samudra hindia barat daya lampung laut arafuru tingkat cepat angin tingkat gelombang wilayah air muncul labilitas lokal kuat dukung proses konvektif skala lokal aceh sumatera utara sumatera selatan lampung jawa barat jawa kalimantan barat kalimantan sulawesi utara sulawesi selatan papua barat papua papua selatan baca warganet keluh jateng panas musim hujan bmkg lansir laman bmkg prediksi wilayah potensi hujan lebat september rabu september baca jawa barat masuk musim hujan jelas bmkg kamis september baca jatengdiy masuk musim hujan jelas bmkg
+80. kompascom berita hias laman tren selasa rabu berita perihal warganet keluh cuaca jawa panas perhati baca sisi daerah jateng pasuk musim hujan ganti sertifikat tanah fisik elektronik lengkap berita populer tren selasa rabu warganet keluh cuaca wilayah jawa jateng panas wilayah indonesia pasuk musim hujan dasar berita kompascom minggu jateng pasuk musim hujan september akun spacch senin cuaca semarang mendung minggu malam suhu panas seakanakan udara perangkap awan warganet akun delre senin unggah citra pulau jawa merah tanda wilayah alami naik suhu lengkap simak warganet keluh jateng panas musim hujan bmkg masyarakat ganti sertifikat tanah fisik analog sertifikat tanah elektronik program terap susul terbit atur menteri agraria tata ruang atrbadan tanah nasional bpn nomor sertipikat elektronik atur resmi cabut atur menteri atrkepala bpn nomor terbit dokumen elektronik giat daftar tanah lengkap simak ganti sertifikat fisik sertifikat tanah elektronik
 </pre></div>
 </div>
 </div>
@@ -771,6 +778,15 @@
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Crawling Artikel (Graph)</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Tugas%207_Clustering%20berita.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -838,8 +854,8 @@ By Dohan Rizqi Hadityo 210411100195
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

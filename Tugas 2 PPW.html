@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,10 +39,10 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -172,6 +172,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201%20PPW.html">Konsep Crawling dan Contoh</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Klasifikasi Berita</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="konsep%20word%20embedding.html">Konsep Word Embedding</a></li>
 
 
@@ -185,9 +186,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -364,11 +370,38 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Klasifikasi Berita</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nama-dohan-rizqi-hadityo">Nama  : Dohan Rizqi Hadityo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-210411100195">NIM   : 210411100195</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelas-pencarian-dan-penambangan-web-a">Kelas : Pencarian dan Penambangan Web A</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-deployment-aplikasi-di-streamlit">Link deployment aplikasi di streamlit :</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-code-scraping-berita">Penjelasan Code Scraping Berita</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">1. Import Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#url-dan-struktur-data">2. URL dan Struktur Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rentang-tanggal-yang-ditentukan">3. Rentang Tanggal yang Ditentukan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-scraping">4. Proses Scraping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-dan-pengambilan-data">5. Parsing dan Pengambilan Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyaringan-berdasarkan-tanggal-dan-kategori">6. Penyaringan Berdasarkan Tanggal dan Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-data-artikel">7. Menyimpan Data Artikel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-dan-menampilkan-data-dalam-dataframe">8. Menyimpan dan Menampilkan Data dalam DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-jumlah-artikel-per-kategori">9. Menampilkan Jumlah Artikel per Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengonversi-data-ke-dalam-dataframe">1. Mengonversi Data ke dalam DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menambahkan-kolom-penomoran">2. Menambahkan Kolom Penomoran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-artikel-berdasarkan-kategori">3. Menghitung Jumlah Artikel Berdasarkan Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-perhitungan">4. Menampilkan Hasil Perhitungan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-artikel-per-kategori">1. Menghitung Jumlah Artikel per Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-grafik-batang">2. Menampilkan Grafik Batang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menambahkan-judul-dan-label">3. Menambahkan Judul dan Label</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyesuaikan-tampilan-dan-menampilkan-grafik">4. Menyesuaikan Tampilan dan Menampilkan Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-nama-fitur-kata-token-dari-tfidfvectorizer-dan-menyimpannya-dalam-variabel-fitur-kata">Mengambil nama fitur kata (token) dari TfidfVectorizer dan menyimpannya dalam variabel fitur_kata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#link-deployment-aplikasi-di-streamlit">Link deployment aplikasi di streamlit :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -400,6 +433,13 @@
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong>requests</strong>: Untuk melakukan permintaan HTTP ke sebuah situs web dan mengambil konten halamannya.</p></li>
+<li><p><strong>pandas</strong>: Untuk memanipulasi data dalam bentuk tabel (dataframe) setelah data diambil.</p></li>
+<li><p><strong>matplotlib.pyplot</strong>: Untuk membuat visualisasi data seperti grafik atau diagram.</p></li>
+<li><p><strong>BeautifulSoup dari bs4</strong>: Untuk mem-parsing konten HTML dan mengekstrak informasi dari halaman web.</p></li>
+<li><p><strong>csv</strong>: Untuk membaca atau menulis data dalam format CSVmize}</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -629,23 +669,127 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_berita</span>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="penjelasan-code-scraping-berita">
+<h1>Penjelasan Code Scraping Berita<a class="headerlink" href="#penjelasan-code-scraping-berita" title="Link to this heading">#</a></h1>
+<p>Kode ini digunakan untuk melakukan scraping data berita dari halaman indeks <a class="reference external" href="http://Kompas.com">Kompas.com</a> dalam rentang waktu yang ditentukan, serta mengkategorikan berita berdasarkan kategori tertentu. Berikut adalah penjelasan singkat tiap bagian kode:</p>
+<section id="import-library">
+<h2>1. Import Library<a class="headerlink" href="#import-library" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_berita</span>
-
-<span class="ne">NameError</span>: name &#39;df_berita&#39; is not defined
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code>: Digunakan untuk mengambil halaman web.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code>: Memproses halaman HTML agar bisa diolah lebih lanjut.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code>: Untuk menyimpan dan memanipulasi data dalam bentuk dataframe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code>: Digunakan untuk membandingkan tanggal artikel yang diambil.</p></li>
+</ul>
+</section>
+<section id="url-dan-struktur-data">
+<h2>2. URL dan Struktur Data<a class="headerlink" href="#url-dan-struktur-data" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://indeks.kompas.com/?page=&quot;</span>
+<span class="n">data_berita</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kategori_berita</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;tren&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;global&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">maks_per_kategori</span> <span class="o">=</span> <span class="mi">100</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base_url</span></code>: URL dasar untuk halaman indeks berita.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_berita</span></code>: Menyimpan hasil scraping artikel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kategori_berita</span></code>: Menghitung jumlah artikel yang telah diambil per kategori.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maks_per_kategori</span></code>: Batas maksimal artikel per kategori (100 artikel per kategori).</p></li>
+</ul>
+</section>
+<section id="rentang-tanggal-yang-ditentukan">
+<h2>3. Rentang Tanggal yang Ditentukan<a class="headerlink" href="#rentang-tanggal-yang-ditentukan" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tanggal_batas_atas</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s2">&quot;25-09-2024&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">-%m-%Y&quot;</span><span class="p">)</span>
+<span class="n">tanggal_batas_bawah</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s2">&quot;18-09-2024&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">-%m-%Y&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tanggal_batas_atas</span></code> dan <code class="docutils literal notranslate"><span class="pre">tanggal_batas_bawah</span></code>: Batas waktu artikel yang akan diambil, yaitu antara 18 September dan 25 September 2024.</p></li>
+</ul>
+</section>
+<section id="proses-scraping">
+<h2>4. Proses Scraping<a class="headerlink" href="#proses-scraping" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">page</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kategori_berita</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">250</span> <span class="ow">and</span> <span class="n">page</span> <span class="o">&lt;=</span> <span class="mi">500</span><span class="p">:</span>
+    <span class="n">indeks_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">page_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">indeks_url</span><span class="p">)</span>
+    <span class="o">...</span>
+</pre></div>
 </div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">page</span></code>: Halaman indeks berita yang akan di-scrape, dimulai dari halaman 1.</p></li>
+<li><p>Loop akan berjalan hingga mendapatkan 250 artikel (50 per kategori) atau hingga mencapai 500 halaman.</p></li>
+</ul>
+</section>
+<section id="parsing-dan-pengambilan-data">
+<h2>5. Parsing dan Pengambilan Data<a class="headerlink" href="#parsing-dan-pengambilan-data" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">soup_page</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page_response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">artikel_items</span> <span class="o">=</span> <span class="n">soup_page</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;articleItem&#39;</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mengambil semua elemen artikel yang ada di halaman tersebut. Setiap artikel kemudian diambil elemen-elemen pentingnya seperti:</p>
+<ul>
+<li><p>Link artikel</p></li>
+<li><p>Judul artikel</p></li>
+<li><p>Kategori artikel</p></li>
+<li><p>Tanggal artikel</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="penyaringan-berdasarkan-tanggal-dan-kategori">
+<h2>6. Penyaringan Berdasarkan Tanggal dan Kategori<a class="headerlink" href="#penyaringan-berdasarkan-tanggal-dan-kategori" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">tanggal_batas_bawah</span> <span class="o">&lt;=</span> <span class="n">tanggal_parsed</span> <span class="o">&lt;=</span> <span class="n">tanggal_batas_atas</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">kategori_artikel</span> <span class="ow">in</span> <span class="n">kategori_berita</span> <span class="ow">and</span> <span class="n">kategori_berita</span><span class="p">[</span><span class="n">kategori_artikel</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">maks_per_kategori</span><span class="p">:</span>
+        <span class="n">artikel_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">artikel_link</span><span class="p">)</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Memeriksa apakah artikel berada dalam rentang tanggal yang diinginkan.</p></li>
+<li><p>Hanya mengambil artikel jika sesuai dengan kategori yang dibutuhkan dan belum mencapai batas maksimal per kategori.</p></li>
+</ul>
+</section>
+<section id="menyimpan-data-artikel">
+<h2>7. Menyimpan Data Artikel<a class="headerlink" href="#menyimpan-data-artikel" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_berita</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">judul_artikel</span><span class="p">,</span> <span class="n">isi_artikel</span><span class="p">,</span> <span class="n">tanggal_artikel</span><span class="p">,</span> <span class="n">kategori_artikel</span><span class="p">])</span>
+<span class="n">kategori_berita</span><span class="p">[</span><span class="n">kategori_artikel</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Setelah semua elemen artikel berhasil diambil, data tersebut disimpan dalam list <code class="docutils literal notranslate"><span class="pre">data_berita</span></code>.</p></li>
+</ul>
+</section>
+<section id="menyimpan-dan-menampilkan-data-dalam-dataframe">
+<h2>8. Menyimpan dan Menampilkan Data dalam DataFrame<a class="headerlink" href="#menyimpan-dan-menampilkan-data-dalam-dataframe" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_berita</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Judul Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Isi Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Tanggal Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Kategori Berita&#39;</span><span class="p">])</span>
+<span class="n">df_berita</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_berita</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_berita</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Data artikel yang diambil kemudian dikonversi menjadi dataframe menggunakan <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
+<li><p>Menambahkan kolom penomoran pada dataframe.</p></li>
+</ul>
+</section>
+<section id="menampilkan-jumlah-artikel-per-kategori">
+<h2>9. Menampilkan Jumlah Artikel per Kategori<a class="headerlink" href="#menampilkan-jumlah-artikel-per-kategori" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jumlah_per_kategori</span> <span class="o">=</span> <span class="n">df_berita</span><span class="p">[</span><span class="s1">&#39;Kategori Berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jumlah_per_kategori</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Menghitung jumlah artikel per kategori dan menampilkannya.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengonversi data ke dalam DataFrame</span>
@@ -671,6 +815,42 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+</section>
+<section id="mengonversi-data-ke-dalam-dataframe">
+<h2>1. Mengonversi Data ke dalam DataFrame<a class="headerlink" href="#mengonversi-data-ke-dalam-dataframe" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_berita</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Judul Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Isi Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Tanggal Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Kategori Berita&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df_berita</span></code>: Data yang sudah dikumpulkan (judul, isi, tanggal, dan kategori berita) dikonversi menjadi DataFrame menggunakan pustaka <code class="docutils literal notranslate"><span class="pre">pandas</span></code> untuk memudahkan pengolahan lebih lanjut.</p></li>
+</ul>
+</section>
+<section id="menambahkan-kolom-penomoran">
+<h2>2. Menambahkan Kolom Penomoran<a class="headerlink" href="#menambahkan-kolom-penomoran" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_berita</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_berita</span><span class="p">)))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Menambahkan kolom penomoran (1, 2, 3, …) pada DataFrame sebagai indeks untuk setiap berita.</p></li>
+</ul>
+</section>
+<section id="menghitung-jumlah-artikel-berdasarkan-kategori">
+<h2>3. Menghitung Jumlah Artikel Berdasarkan Kategori<a class="headerlink" href="#menghitung-jumlah-artikel-berdasarkan-kategori" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jumlah_per_kategori</span> <span class="o">=</span> <span class="n">df_berita</span><span class="p">[</span><span class="s1">&#39;Kategori Berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value_counts()</span></code>: Menghitung berapa banyak artikel dalam setiap kategori yang tersedia dalam DataFrame <code class="docutils literal notranslate"><span class="pre">df_berita</span></code>.</p></li>
+</ul>
+</section>
+<section id="menampilkan-hasil-perhitungan">
+<h2>4. Menampilkan Hasil Perhitungan<a class="headerlink" href="#menampilkan-hasil-perhitungan" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">jumlah_per_kategori</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Menampilkan hasil perhitungan jumlah artikel per kategori untuk memberikan gambaran distribusi berita yang telah diambil.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_filename</span> <span class="o">=</span> <span class="s2">&quot;berita_kompas_sample.csv&quot;</span>
@@ -794,6 +974,51 @@ Name: count, dtype: int64
 <img alt="_images/3f579850eba5a2f08e6a06a6f754c8abefc1cd90c8bae6712e81a1459dad127c.png" src="_images/3f579850eba5a2f08e6a06a6f754c8abefc1cd90c8bae6712e81a1459dad127c.png" />
 </div>
 </div>
+</section>
+<section id="menghitung-jumlah-artikel-per-kategori">
+<h2>1. Menghitung Jumlah Artikel per Kategori<a class="headerlink" href="#menghitung-jumlah-artikel-per-kategori" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">category_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kategori Berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value_counts()</span></code>: Menghitung jumlah artikel untuk setiap kategori yang terdapat dalam kolom ‘Kategori Berita’ pada DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p></li>
+</ul>
+</section>
+<section id="menampilkan-grafik-batang">
+<h2>2. Menampilkan Grafik Batang<a class="headerlink" href="#menampilkan-grafik-batang" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">category_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(10,</span> <span class="pre">6))</span></code>: Mengatur ukuran grafik batang yang akan ditampilkan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">category_counts.plot(kind='bar',</span> <span class="pre">color='skyblue')</span></code>: Membuat grafik batang berdasarkan jumlah artikel per kategori dengan warna batang biru langit.</p></li>
+</ul>
+</section>
+<section id="menambahkan-judul-dan-label">
+<h2>3. Menambahkan Judul dan Label<a class="headerlink" href="#menambahkan-judul-dan-label" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Jumlah Artikel per Kategori&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kategori&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Artikel Berita&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.title()</span></code>: Menambahkan judul pada grafik.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> dan <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code>: Menambahkan label pada sumbu x dan y.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xticks(rotation=45)</span></code>: Memutar label pada sumbu x sebesar 45 derajat agar lebih mudah dibaca.</p></li>
+</ul>
+</section>
+<section id="menyesuaikan-tampilan-dan-menampilkan-grafik">
+<h2>4. Menyesuaikan Tampilan dan Menampilkan Grafik<a class="headerlink" href="#menyesuaikan-tampilan-dan-menampilkan-grafik" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.tight_layout()</span></code>: Menyesuaikan tata letak grafik agar elemen tidak saling tumpang tindih.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code>: Menampilkan grafik yang telah dibuat.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -804,6 +1029,10 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<p><strong>Pandas (pd)</strong>: Digunakan untuk manipulasi dan analisis data berbentuk tabel.</p>
+<p><strong>re</strong>: Library untuk pencocokan pola teks menggunakan ekspresi reguler.</p>
+<p><strong>TfidfVectorizer</strong>: Mengubah teks menjadi representasi numerik berbasis TF-IDF (Term Frequency-Inverse Document Frequency) untuk pemrosesan teks.</p>
+<p><strong>cosine_similarity</strong>: Menghitung kesamaan antar vektor teks berdasarkan cosine similarity.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;berita_kompas_sample.csv&#39;</span><span class="p">)</span>
@@ -925,6 +1154,10 @@ Name: count, dtype: int64
 <p>200 rows × 2 columns</p>
 </div></div></div>
 </div>
+<p><strong>Fungsi casefolding</strong>: Fungsi ini mengubah teks di kolom Isi_Berita menjadi huruf kecil dengan metode .lower().</p>
+<p><strong>Simpan Kolom Asli</strong>: Baris ini hanya menegaskan bahwa data di kolom ‘Isi Berita’ tetap ada dan tidak berubah.</p>
+<p><strong>Terapkan Case Folding</strong>: Dengan metode .apply(), fungsi casefolding diterapkan pada setiap elemen di kolom ‘Isi Berita’, dan hasilnya disimpan di kolom baru ‘Lowercase’.</p>
+<p><strong>Menampilkan Hasil</strong>: Baris terakhir menampilkan 5 baris pertama dari kolom asli ‘Isi Berita’ dan kolom hasil case folding ‘Lowercase’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proses cleansing</span>
@@ -1044,6 +1277,18 @@ Name: count, dtype: int64
 <p>200 rows × 2 columns</p>
 </div></div></div>
 </div>
+<p><strong>Fungsi cleansing</strong>: Fungsi ini melakukan pembersihan teks dari elemen-elemen yang tidak diperlukan:</p>
+<ul class="simple">
+<li><p>Menghapus whitespace di awal/akhir teks.</p></li>
+<li><p>Menghapus tanda baca dan karakter khusus.</p></li>
+<li><p>Menghapus angka dari teks.</p></li>
+<li><p>Menghapus huruf tunggal (opsional).</p></li>
+<li><p>Menghapus karakter non-standar seperti simbol asing.</p></li>
+<li><p>Menghilangkan spasi ganda dalam teks.</p></li>
+</ul>
+<p><strong>Case Folding</strong>: Sebelum pembersihan, teks terlebih dahulu diubah menjadi huruf kecil dengan fungsi casefolding.</p>
+<p><strong>Cleansing</strong>: Fungsi cleansing diterapkan pada hasil case folding untuk membersihkan teks dari elemen-elemen yang tidak diinginkan.</p>
+<p><strong>Menampilkan Hasil</strong>: Kode menampilkan perbandingan antara teks hasil case folding dan hasil cleansing untuk 5 baris pertama.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
@@ -1160,6 +1405,9 @@ Name: count, dtype: int64
 <p>200 rows × 2 columns</p>
 </div></div></div>
 </div>
+<p><strong>Fungsi word_tokenize_wrapper</strong>: Fungsi ini membungkus fungsi word_tokenize dari NLTK (Natural Language Toolkit) untuk memecah teks menjadi kata-kata (token) secara individual.</p>
+<p><strong>Tokenisasi</strong>: Kode menerapkan fungsi word_tokenize_wrapper pada setiap teks di kolom ‘cleaned_text’ menggunakan .apply(). Hasilnya disimpan dalam kolom baru ‘tokenized_text’.</p>
+<p><strong>Menampilkan Hasil</strong>: Baris terakhir menampilkan 5 baris pertama dari kolom ‘cleaned_text’ yang berisi teks bersih dan kolom ‘tokenized_text’ yang berisi daftar kata (token) hasil pemisahan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghapus stopwords</span>
@@ -1257,6 +1505,9 @@ Name: count, dtype: int64
 <p>200 rows × 2 columns</p>
 </div></div></div>
 </div>
+<p><strong>Stopwords</strong>: Daftar stopwords (kata-kata umum yang sering muncul tetapi tidak memiliki makna signifikan, seperti “dan”, “di”, “ke”) diambil menggunakan NLTK untuk bahasa Indonesia. Hasilnya disimpan dalam bentuk set (stop_words).</p>
+<p><strong>Penghapusan Stopwords</strong>: Kode ini menggunakan fungsi lambda untuk mengiterasi setiap token (kata) dalam kolom ‘tokenized_text’ dan menghapus kata-kata yang ada di daftar stopwords. Hasilnya disimpan dalam kolom ‘no_stopwords_text’.</p>
+<p><strong>Menampilkan Hasil</strong>: Baris terakhir menampilkan perbandingan antara teks tokenized (‘tokenized_text’) dan hasil setelah penghapusan stopwords (‘no_stopwords_text’).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stemming menggunakan Sastrawi</span>
@@ -1356,6 +1607,23 @@ Name: count, dtype: int64
 <p>200 rows × 2 columns</p>
 </div></div></div>
 </div>
+<p><strong>Inisialisasi Stemmer</strong>:</p>
+<ul class="simple">
+<li><p>Menggunakan Sastrawi, sebuah library stemming untuk Bahasa Indonesia.</p></li>
+<li><p>StemmerFactory() membuat objek stemmer, dan create_stemmer() menghasilkan stemmer yang akan digunakan untuk mengubah kata-kata ke bentuk dasar.</p></li>
+</ul>
+<p><strong>Aplikasi Stemming</strong>:</p>
+<ul class="simple">
+<li><p>Fungsi lambda digunakan untuk mengiterasi setiap kata (tokens) di kolom ‘no_stopwords_text’ dan menerapkan stemming pada setiap kata menggunakan stemmer.stem(word). Hasil stemming disimpan di kolom ‘stemmed_text’.</p></li>
+</ul>
+<p><strong>Gabung Kembali Teks</strong>:</p>
+<ul class="simple">
+<li><p>Setelah stemming, daftar kata-kata yang telah distem kembali digabung menjadi kalimat utuh dengan menggunakan ‘ ‘.join(x) dan disimpan dalam kolom ‘final_text’.</p></li>
+</ul>
+<p><strong>Menampilkan Hasil</strong>:</p>
+<ul class="simple">
+<li><p>Baris terakhir menampilkan perbandingan antara teks tanpa stopwords (‘no_stopwords_text’) dan teks akhir yang sudah melalui proses stemming (‘final_text’).</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan kolom &#39;no_stopwords_text&#39; dan &#39;final_text&#39; dari DataFrame df ke dalam file CSV</span>
@@ -1372,6 +1640,15 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<p><strong>Menyimpan ke CSV</strong>:</p>
+<ul class="simple">
+<li><p>Kode ini menyimpan dua kolom dari DataFrame (‘no_stopwords_text’ dan ‘final_text’) ke dalam file CSV bernama hasil_stemming_stopwords.csv.</p></li>
+<li><p>Argumen index=False digunakan agar indeks baris tidak ikut disimpan di dalam file CSV.</p></li>
+</ul>
+<p><strong>Konfirmasi Penyimpanan</strong>:</p>
+<ul class="simple">
+<li><p>Setelah penyimpanan berhasil, pesan “Hasil berhasil disimpan ke ‘hasil_stemming_stopwords.csv’” dicetak sebagai konfirmasi kepada pengguna bahwa file CSV telah dibuat.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghapus kolom &#39;Kategori Berita&#39; dari DataFrame df dan menyimpan hasilnya di variabel X</span>
@@ -1383,6 +1660,15 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<p><strong>Menghapus Kolom</strong>:</p>
+<ul class="simple">
+<li><p>Kode ini menghapus kolom ‘Kategori Berita’ dari DataFrame df menggunakan metode .drop(columns=…).</p></li>
+<li><p>Hasilnya disimpan dalam variabel X, yang berisi semua kolom kecuali kolom yang dihapus.</p></li>
+</ul>
+<p><strong>Menyimpan Target Model</strong>:</p>
+<ul class="simple">
+<li><p>Kolom ‘Kategori Berita’ disimpan ke dalam variabel Y, yang berfungsi sebagai target atau label yang akan digunakan untuk melatih model machine learning.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat objek LabelEncoder untuk mengubah kategori berita menjadi format numerik</span>
@@ -1618,6 +1904,15 @@ Name: count, dtype: int64
 <p>200 rows × 13 columns</p>
 </div></div></div>
 </div>
+<p><strong>Inisialisasi LabelEncoder</strong>: Objek LabelEncoder dibuat untuk mengubah kategori teks menjadi format numerik yang dapat digunakan dalam model machine learning.</p>
+<p><strong>Fitting dan Transformasi</strong>: Kode ini menerapkan metode .fit_transform() pada kolom ‘Kategori Berita’, yang melakukan dua langkah:</p>
+<ul class="simple">
+<li><p>Fitting: Mempelajari kategori yang ada dalam kolom tersebut.</p></li>
+<li><p>Transformasi: Mengubah setiap kategori menjadi angka sesuai dengan urutan yang telah dipelajari.</p></li>
+</ul>
+<p><strong>Mengupdate DataFrame</strong>: Hasil transformasi disimpan kembali ke kolom ‘Kategori Berita’, sehingga kolom ini sekarang berisi nilai numerik.</p>
+<p><strong>Pesan Konfirmasi</strong>: Pesan dicetak untuk menunjukkan bahwa proses encoding telah berhasil dilakukan.</p>
+<p><strong>Menampilkan DataFrame</strong>: Kode akan menampilkan DataFrame df untuk melihat hasil encoding pada kolom ‘Kategori Berita’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil nilai dari kolom &#39;Isi Berita&#39; sebagai array dan menyimpannya ke variabel x</span>
@@ -1629,6 +1924,8 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<p><strong>Mengambil Nilai Kolom ‘Isi Berita’</strong>: Nilai dari kolom ‘Isi Berita’ diambil dan disimpan dalam variabel x sebagai array. Ini memungkinkan akses yang lebih mudah ke data untuk analisis atau pemrosesan lebih lanjut.</p>
+<p><strong>Mengambil Nilai Kolom ‘Kategori Berita’</strong>: Nilai dari kolom ‘Kategori Berita’ juga diambil dan disimpan dalam variabel y sebagai array. Ini berfungsi sebagai target (label) untuk model machine learning.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Memisahkan data menjadi set pelatihan dan set pengujian</span>
@@ -1638,6 +1935,17 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<p><strong>Fungsi train_test_split</strong>: Kode ini menggunakan fungsi train_test_split dari Scikit-learn untuk membagi data menjadi dua set: satu untuk pelatihan dan satu untuk pengujian.</p>
+<p><strong>Proporsi Pembagian</strong>:</p>
+<ul class="simple">
+<li><p>80% data digunakan untuk pelatihan (disimpan dalam Xtrain dan Ytrain).</p></li>
+<li><p>20% data digunakan untuk pengujian (disimpan dalam Xtest dan Ytest).</p></li>
+</ul>
+<p><strong>Parameter</strong>:</p>
+<ul class="simple">
+<li><p>test_size=0.2: Menentukan bahwa 20% dari total data akan digunakan sebagai set pengujian.</p></li>
+<li><p>random_state=2: Menetapkan seed untuk menghasilkan pembagian data yang konsisten setiap kali kode dijalankan, sehingga hasilnya dapat direproduksi.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat objek TfidfVectorizer untuk mengubah teks menjadi representasi numerik berbasis TF-IDF</span>
@@ -1654,6 +1962,13 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<p><strong>Inisialisasi TfidfVectorizer</strong>: Objek TfidfVectorizer dibuat untuk mengubah teks menjadi vektor numerik berdasarkan frekuensi term-tertimbang (Term Frequency - Inverse Document Frequency). Ini sangat berguna dalam pemrosesan teks untuk memahami kata-kata penting dalam sebuah dokumen.</p>
+<p><strong>fit_transform untuk Data Latih</strong>: Kode menerapkan fit_transform pada teks dari kolom ‘Isi Berita’ (variabel x). Metode ini:</p>
+<ul class="simple">
+<li><p>Fit: Mempelajari frekuensi dan distribusi kata-kata dalam data.</p></li>
+<li><p>Transform: Mengubah teks menjadi vektor TF-IDF sesuai hasil pembelajaran. Hasilnya disimpan dalam variabel X, yang merupakan representasi numerik dari teks.</p></li>
+</ul>
+<p><strong>transform untuk Data Baru</strong>: Fungsi transform digunakan untuk mentransformasikan teks yang sama (atau bisa juga teks baru di masa mendatang) menjadi representasi TF-IDF, tanpa perlu melakukan fitting ulang. Hasilnya disimpan dalam variabel X_array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengonversi representasi sparse matrix dari X_array menjadi array NumPy dan mencetaknya</span>
@@ -1689,6 +2004,8 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
+<section id="mengambil-nama-fitur-kata-token-dari-tfidfvectorizer-dan-menyimpannya-dalam-variabel-fitur-kata">
+<h3>Mengambil nama fitur kata (token) dari TfidfVectorizer dan menyimpannya dalam variabel fitur_kata<a class="headerlink" href="#mengambil-nama-fitur-kata-token-dari-tfidfvectorizer-dan-menyimpannya-dalam-variabel-fitur-kata" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung cosine similarity antara semua dokumen dalam matriks TF-IDF X</span>
@@ -1741,6 +2058,13 @@ Kategori Berita
 </div>
 </div>
 </div>
+<p><strong>Menghitung Cosine Similarity</strong>:</p>
+<p>Kode ini menggunakan fungsi cosine_similarity untuk menghitung kesamaan antara semua dokumen dalam matriks TF-IDF X. Hasilnya adalah matriks di mana setiap elemen menunjukkan seberapa mirip dua dokumen berdasarkan representasi TF-IDF mereka.</p>
+<p><strong>Menyusun DataFrame untuk Cosine Similarity</strong>:</p>
+<p>Hasil matriks cosine similarity disimpan dalam DataFrame cosine_sim_df.</p>
+<p>Indeks dan kolom DataFrame ini menggunakan kategori berita dari DataFrame df, sehingga memudahkan interpretasi hasil kesamaan antar kategori berita.</p>
+<p><strong>Menampilkan Hasil</strong>:</p>
+<p>Baris terakhir menampilkan beberapa baris pertama dari DataFrame cosine_sim_df, sehingga pengguna dapat melihat seberapa mirip dokumen-dokumen berdasarkan cosine similarity.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengimpor modul pickle untuk menyimpan objek Python ke dalam file</span>
@@ -1754,6 +2078,9 @@ Kategori Berita
 </div>
 </div>
 </div>
+<p><strong>Impor Modul Pickle</strong>: Modul pickle digunakan untuk menyimpan dan memuat objek Python ke dalam format biner. Ini berguna untuk menyimpan objek yang telah dilatih, seperti model atau vektorizer, sehingga dapat digunakan kembali di lain waktu tanpa perlu melatih ulang.</p>
+<p><strong>Menyimpan Objek TfidfVectorizer</strong>: Kode ini membuka (atau membuat) file bernama tfidf_vectorizer.pkl dalam mode biner untuk menulis (‘wb’).</p>
+<p>Menggunakan pickle.dump(vect, f), objek vect (yang merupakan instance dari TfidfVectorizer) disimpan ke dalam file tersebut.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gdown</span>
@@ -1791,6 +2118,16 @@ Kategori Berita
 </div>
 </div>
 </div>
+<p><strong>Mencetak Dimensi Matriks Fitur X</strong>:</p>
+<ul class="simple">
+<li><p>Kode ini mencetak dimensi dari matriks fitur X, yang merupakan hasil dari representasi TF-IDF dokumen. Metode .shape akan mengembalikan tuple yang menunjukkan jumlah dokumen dan jumlah fitur (kata-kata unik) dalam matriks.</p></li>
+<li><p>Format output biasanya berupa (jumlah_dokumen, jumlah_fitur).</p></li>
+</ul>
+<p><strong>Mencetak Dimensi Array Ytrain</strong>:</p>
+<ul class="simple">
+<li><p>Kode ini mencetak dimensi dari array Ytrain, yang berisi label target untuk data pelatihan. Dengan menggunakan .shape, Anda akan mendapatkan jumlah label yang ada dalam data pelatihan.</p></li>
+<li><p>Outputnya biasanya hanya akan menampilkan satu nilai, yaitu jumlah label.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Potong X agar sesuai dengan jumlah sampel pada Ytrain (160 sampel)</span>
@@ -2216,6 +2553,12 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 }
 </style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;LogisticRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div></div></div></div></div>
 </div>
+<p><strong>Memotong Matriks Fitur X</strong>:</p>
+<p>Kode ini memotong matriks fitur X agar sesuai dengan jumlah sampel pada Ytrain, yang berisi 160 sampel. Dengan menggunakan slicing X[:len(Ytrain)], Anda memastikan bahwa hanya 160 baris pertama dari X yang diambil.</p>
+<p><strong>Memastikan Kesamaan Jumlah Sampel</strong>:</p>
+<p>Setelah pemotongan, kode mencetak bentuk dari X dan Ytrain untuk memastikan bahwa kedua variabel sekarang memiliki jumlah sampel yang sama. Ini penting untuk menjamin bahwa setiap fitur memiliki label yang sesuai saat model dilatih.</p>
+<p><strong>Melatih Model</strong>:</p>
+<p>Kode ini memanggil metode .fit() pada objek model (misalnya, model regresi logistik) untuk melatih model menggunakan data fitur X dan label Ytrain. Dengan langkah ini, model belajar dari data yang diberikan untuk membuat prediksi di masa mendatang.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Meyimpan model</span>
@@ -2225,6 +2568,11 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p><strong>Menyimpan Model</strong>:</p>
+<p>Kode ini membuka (atau membuat) file bernama logistic_model.pkl dalam mode biner untuk menulis (‘wb’).
+Menggunakan pickle.dump(model, f), objek model (yang telah dilatih, misalnya model regresi logistik) disimpan ke dalam file tersebut.</p>
+<p><strong>Keuntungan Menyimpan Model</strong>:</p>
+<p>Menyimpan model memungkinkan Anda untuk menggunakan model yang sudah dilatih di lain waktu tanpa perlu melatih ulang. Ini menghemat waktu dan sumber daya, serta memudahkan penerapan model pada data baru.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load TF-IDF dan model logistic regression dari file pickle</span>
@@ -2234,6 +2582,10 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p><strong>Membuka File</strong>:</p>
+<p>Kode ini membuka file tfidf_vectorizer.pkl dalam mode biner untuk membaca (‘rb’). Ini adalah file yang sebelumnya disimpan menggunakan pickle.</p>
+<p><strong>Memuat TF-IDF Vectorizer</strong>:</p>
+<p>Menggunakan pickle.load(f), objek tfidf_vectorizer dimuat dari file. Ini mengembalikan objek TfidfVectorizer yang telah disimpan sebelumnya, sehingga Anda dapat menggunakan konfigurasi dan parameter yang sama tanpa perlu mengulangi proses fitting.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;logistic_model.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -2253,6 +2605,10 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p><strong>Membuka File</strong>:</p>
+<p>Kode ini membuka file logistic_model.pkl dalam mode biner untuk membaca (‘rb’). Ini adalah file yang sebelumnya disimpan menggunakan pickle setelah model dilatih.</p>
+<p><strong>Memuat Model</strong>:</p>
+<p>Menggunakan pickle.load(f), objek model dimuat dari file. Ini mengembalikan objek model regresi logistik yang telah disimpan sebelumnya, sehingga Anda dapat melanjutkan untuk menggunakan model tersebut untuk membuat prediksi atau evaluasi tanpa perlu melatih ulang.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">Ytest</span><span class="p">,</span> <span class="n">prediksi</span><span class="p">)</span>
@@ -2266,6 +2622,8 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p><strong>Menghitung Akurasi</strong>:</p>
+<p>Kode ini menggunakan fungsi accuracy_score dari Scikit-learn untuk menghitung akurasi model. Akurasi diukur dengan membandingkan label yang sebenarnya (Ytest) dengan prediksi yang dihasilkan oleh model (prediksi).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># confusion matrix</span>
@@ -2284,6 +2642,18 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <img alt="_images/9adb2c9c5f911b7ac4b8f1f513519a19497a0e70f99ab9dfccf5d4661346c136.png" src="_images/9adb2c9c5f911b7ac4b8f1f513519a19497a0e70f99ab9dfccf5d4661346c136.png" />
 </div>
 </div>
+<p><strong>Menghitung Confusion Matrix</strong>:</p>
+<p>Kode ini menggunakan fungsi confusion_matrix dari Scikit-learn untuk menghitung confusion matrix berdasarkan label sebenarnya (Ytest) dan prediksi model (prediksi). Confusion matrix memberikan gambaran tentang bagaimana klasifikasi model berfungsi dengan menunjukkan jumlah prediksi yang benar dan salah untuk setiap kelas.</p>
+<p><strong>Menyiapkan Visualisasi</strong>:</p>
+<p>plt.figure(figsize=(8, 6)) mengatur ukuran gambar untuk visualisasi confusion matrix.</p>
+<p>sns.heatmap() dari Seaborn digunakan untuk membuat heatmap dari confusion matrix.</p>
+<p>Parameter annot=True memungkinkan menampilkan nilai dalam sel heatmap.</p>
+<p>Parameter fmt=”d” mengatur format nilai sebagai bilangan bulat.</p>
+<p>cmap=”Blues” mengatur skema warna heatmap.</p>
+<p><strong>Menambahkan Label dan Judul</strong>:</p>
+<p>Kode ini menambahkan judul, label sumbu x (Predicted), dan label sumbu y (Actual) pada plot untuk memberikan konteks yang jelas tentang informasi yang ditampilkan.</p>
+<p><strong>Menampilkan Plot</strong>:</p>
+<p>plt.show() digunakan untuk menampilkan visualisasi confusion matrix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan hasil prediksi</span>
@@ -2302,6 +2672,10 @@ Prediksi: [0 0 0 0 0 1 0 1 1 1 1 0 0 1 0 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 0 1 1 0
 </div>
 </div>
 </div>
+<p><strong>Menampilkan Label Aktual</strong>:</p>
+<p>Kode ini mencetak isi dari Ytest, yang berisi label aktual dari data pengujian. Ini menunjukkan kategori sebenarnya yang seharusnya dimiliki oleh setiap dokumen dalam set pengujian.</p>
+<p><strong>Menampilkan Hasil Prediksi</strong>:</p>
+<p>Kode ini mencetak isi dari prediksi, yang berisi label yang diprediksi oleh model untuk data pengujian. Ini menunjukkan kategori yang diperkirakan oleh model berdasarkan input yang diberikan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_clean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_stemming_stopwords.csv&#39;</span><span class="p">)</span>
@@ -2440,6 +2814,53 @@ Jumlah dokumen yang terhubung: 88
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong>Mengatasi Nilai NaN</strong>:</p></li>
+</ol>
+<p>Kode ini memastikan bahwa kolom ‘final_text’ dalam DataFrame data_clean tidak mengandung nilai NaN dengan menggantinya dengan string kosong (‘’). Ini penting agar proses TF-IDF dapat berjalan tanpa error.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Proses TF-IDF</strong>:</p></li>
+</ol>
+<p>Menggunakan TfidfVectorizer, kode ini mengonversi teks yang ada di kolom ‘final_text’ menjadi matriks TF-IDF.
+Hasil dari fit_transform disimpan dalam text_tf, yang merupakan matriks sparse.
+Konversi Matriks TF-IDF ke Array NumPy:</p>
+<p>Kode ini mengonversi matriks sparse text_tf menjadi array NumPy (tfidf_array) agar lebih mudah digunakan untuk perhitungan lebih lanjut.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Menghitung Similarity Cosinus</strong>:</p></li>
+</ol>
+<p>Similarity cosinus dihitung dengan menggunakan produk dot dari tfidf_array dengan transposenya (tfidf_array.T).</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Menghitung Norma Setiap Dokumen</strong>:</p></li>
+</ol>
+<p>Norma dari setiap dokumen dihitung untuk digunakan dalam normalisasi similarity. Ini dilakukan dengan menghitung akar kuadrat dari elemen diagonal matriks similarity.</p>
+<ol class="arabic simple" start="5">
+<li><p><strong>Normalisasi Similarity</strong>:</p></li>
+</ol>
+<p>Menghindari pembagian dengan nol dengan mengganti norma yang nol dengan nilai kecil (1e-10).
+Kemudian, similarity dinormalisasi dengan membagi setiap elemen dengan produk norma dari pasangan dokumen.</p>
+<ol class="arabic simple" start="6">
+<li><p><strong>Membuat Matriks Adjacency</strong>:</p></li>
+</ol>
+<p>Threshold (ambang batas) ditentukan untuk menentukan apakah dua dokumen terhubung atau tidak. Jika similarity antara dua dokumen lebih besar dari threshold, maka koneksi dibuat.
+Self-loops (koneksi dokumen dengan dirinya sendiri) dihapus dengan mengisi diagonal matriks dengan nol.</p>
+<ol class="arabic simple" start="7">
+<li><p><strong>Konversi ke Matriks Sparse</strong>:</p></li>
+</ol>
+<p>Matriks adjacency dapat dikonversi menjadi format sparse (csr_matrix) untuk efisiensi memori, terutama jika matriks besar dan sebagian besar elemen bernilai nol.</p>
+<ol class="arabic simple" start="8">
+<li><p><strong>Menampilkan Matriks Adjacency</strong>:</p></li>
+</ol>
+<p>Matriks adjacency ditampilkan di konsol.</p>
+<ol class="arabic simple" start="9">
+<li><p><strong>Statistik Matriks</strong>:</p></li>
+</ol>
+<p>Kode ini menghitung dan menampilkan statistik dari matriks adjacency:
+Total koneksi: Jumlah total koneksi antara dokumen.</p>
+<ol class="arabic simple" start="10">
+<li><p><strong>Densitas matriks</strong>:</p></li>
+</ol>
+<p>Rasio koneksi terhadap jumlah kemungkinan koneksi (jumlah elemen matriks - jumlah diagonal).
+Jumlah dokumen yang terhubung: Menghitung jumlah dokumen yang memiliki setidaknya satu koneksi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Proses Cosine Similarity</span>
@@ -2487,6 +2908,18 @@ Jumlah dokumen yang terhubung: 88
 </div>
 </div>
 </div>
+<p><strong>Memuat Data</strong>:</p>
+<p>Kode ini memuat data dari file CSV yang berisi kolom ‘final_text’ menggunakan pandas. Data yang dimuat disimpan dalam DataFrame data_clean.</p>
+<p><strong>Mengatasi Nilai NaN</strong>:</p>
+<p>Jika terdapat nilai NaN dalam kolom ‘final_text’, kode ini menggantinya dengan string kosong (‘’). Ini memastikan bahwa tidak ada nilai yang hilang yang dapat mengganggu proses TF-IDF.</p>
+<p><strong>Proses TF-IDF</strong>:</p>
+<p>Menggunakan TfidfVectorizer, kode ini mengonversi teks yang ada di kolom ‘final_text’ menjadi matriks TF-IDF. Hasil dari fit_transform disimpan dalam variabel tfidf_matrix.</p>
+<p>Dengan menggunakan .astype(‘U’), teks diubah menjadi format Unicode agar kompatibel dengan TF-IDF.</p>
+<p><strong>Menghitung Cosine Similarity</strong>:</p>
+<p>Cosine similarity dihitung dengan mengalikan matriks TF-IDF (tfidf_matrix) dengan transposenya (tfidf_matrix.T).
+Hasilnya diubah menjadi array NumPy menggunakan .A, sehingga Anda mendapatkan matriks cosine similarity yang menunjukkan sejauh mana setiap dokumen mirip satu sama lain.</p>
+<p><strong>Menampilkan Hasil</strong>:</p>
+<p>Kode ini mencetak matriks cosine similarity. Matriks ini memberikan informasi tentang hubungan antara dokumen: nilai yang lebih tinggi menunjukkan tingkat kesamaan yang lebih besar antara pasangan dokumen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">louvain</span>
@@ -2607,6 +3040,108 @@ Module &#39;community&#39; tidak ditemukan. Instalasi: pip install python-louvai
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_clean['final_text']</span> <span class="pre">=</span> <span class="pre">data_clean['final_text'].fillna('')</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengganti NaN dalam kolom <code class="docutils literal notranslate"><span class="pre">'final_text'</span></code> dengan string kosong.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cosine_similarity(X):</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendefinisikan fungsi untuk menghitung cosine similarity antar dokumen.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">X_normalized</span> <span class="pre">=</span> <span class="pre">X</span> <span class="pre">/</span> <span class="pre">np.linalg.norm(X,</span> <span class="pre">axis=1)[:,</span> <span class="pre">np.newaxis]</span></code></strong></p>
+<ul class="simple">
+<li><p>Menormalisasi matriks untuk mendapatkan representasi unit.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">np.dot(X_normalized,</span> <span class="pre">X_normalized.T)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung produk dot untuk menghasilkan matriks cosine similarity.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_vectorizer</span> <span class="pre">=</span> <span class="pre">TfidfVectorizer()</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat objek <code class="docutils literal notranslate"><span class="pre">TfidfVectorizer</span></code> untuk mengubah teks menjadi representasi TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">text_tf</span> <span class="pre">=</span> <span class="pre">tfidf_vectorizer.fit_transform(data_clean['final_text'].astype('U'))</span></code></strong></p>
+<ul class="simple">
+<li><p>Menerapkan TF-IDF pada kolom <code class="docutils literal notranslate"><span class="pre">'final_text'</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_array</span> <span class="pre">=</span> <span class="pre">text_tf.toarray()</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengonversi matriks sparse TF-IDF menjadi array NumPy.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">similarity_matrix</span> <span class="pre">=</span> <span class="pre">cosine_similarity(tfidf_array)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung matriks cosine similarity berdasarkan array TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">nx.Graph()</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat objek graf kosong <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(len(similarity_matrix)):</span></code></strong></p>
+<ul class="simple">
+<li><p>Menambahkan node ke graf untuk setiap dokumen.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">G.add_edge(i,</span> <span class="pre">j,</span> <span class="pre">weight=similarity)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menambahkan edge antara dua node dengan bobot similarity.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">not</span> <span class="pre">nx.is_connected(G):</span></code></strong></p>
+<ul class="simple">
+<li><p>Memeriksa apakah graf terhubung, menambahkan edge jika perlu.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(12,</span> <span class="pre">8))</span></code></strong></p>
+<ul class="simple">
+<li><p>Menentukan ukuran figure untuk visualisasi graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nx.draw_networkx_nodes(G,</span> <span class="pre">pos,</span> <span class="pre">node_size=300,</span> <span class="pre">node_color='lightblue')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggambar node pada graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nx.draw_networkx_edges(G,</span> <span class="pre">pos,</span> <span class="pre">width=[w</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">for</span> <span class="pre">w</span> <span class="pre">in</span> <span class="pre">weights],</span> <span class="pre">alpha=0.7)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggambar edges dengan ketebalan berdasarkan bobot similarity.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">plt.title('Graph</span> <span class="pre">Terhubung</span> <span class="pre">Dokumen</span> <span class="pre">Berdasarkan</span> <span class="pre">Cosine</span> <span class="pre">Similarity')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menambahkan judul pada plot graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print(f&quot;Jumlah</span> <span class="pre">node</span> <span class="pre">dalam</span> <span class="pre">graph:</span> <span class="pre">{G.number_of_nodes()}&quot;)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mencetak jumlah node dalam graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print(f&quot;Jumlah</span> <span class="pre">edge</span> <span class="pre">dalam</span> <span class="pre">graph:</span> <span class="pre">{G.number_of_edges()}&quot;)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mencetak jumlah edge dalam graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">try:</span> <span class="pre">from</span> <span class="pre">community</span> <span class="pre">import</span> <span class="pre">community_louvain</span></code></strong></p>
+<ul class="simple">
+<li><p>Mencoba mengimpor modul untuk mendeteksi komunitas dalam graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print(f&quot;Jumlah</span> <span class="pre">komunitas</span> <span class="pre">terdeteksi:</span> <span class="pre">{len(set(partition.values()))}&quot;)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mencetak jumlah komunitas yang terdeteksi dalam graf.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
@@ -2742,10 +3277,147 @@ Node dengan Betweenness Centrality tertinggi: 0
 <img alt="_images/844145b46466506b1216f808a711d0295006075bb6d8978e1013aa37b13b18a4.png" src="_images/844145b46466506b1216f808a711d0295006075bb6d8978e1013aa37b13b18a4.png" />
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">closeness_centrality</span> <span class="pre">=</span> <span class="pre">nx.closeness_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung nilai Closeness Centrality untuk setiap node dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">degree_centrality</span> <span class="pre">=</span> <span class="pre">nx.degree_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung nilai Degree Centrality untuk setiap node dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">betweenness_centrality</span> <span class="pre">=</span> <span class="pre">nx.betweenness_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung nilai Betweenness Centrality untuk setiap node dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame({...})</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyusun hasil centrality menjadi DataFrame dengan kolom untuk setiap jenis centrality.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df.sort_values(...).head(10)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan 10 node dengan nilai tertinggi untuk setiap centrality (Closeness, Degree, Betweenness).</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">plt.subplots(1,</span> <span class="pre">3,</span> <span class="pre">figsize=(18,</span> <span class="pre">5))</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat tiga plot histogram untuk memvisualisasikan distribusi dari masing-masing centrality.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df.to_csv('centrality_measures.csv')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyimpan hasil centrality ke dalam file CSV bernama <code class="docutils literal notranslate"><span class="pre">centrality_measures.csv</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">max(closeness_centrality,</span> <span class="pre">key=closeness_centrality.get)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan node dengan nilai Closeness Centrality tertinggi.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nx.draw_networkx_nodes(...,</span> <span class="pre">node_size=node_sizes)</span></code></strong></p>
+<ul class="simple">
+<li><p>Visualisasi graph dengan ukuran node berdasarkan nilai Betweenness Centrality.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nx.draw_networkx_edges(...,</span> <span class="pre">width=[w</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">for</span> <span class="pre">w</span> <span class="pre">in</span> <span class="pre">weights])</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggambar edges dengan ketebalan berdasarkan nilai similarity dari weight.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 <section id="link-deployment-aplikasi-di-streamlit">
-<h2>Link deployment aplikasi di streamlit :<a class="headerlink" href="#link-deployment-aplikasi-di-streamlit" title="Link to this heading">#</a></h2>
+<h3>Link deployment aplikasi di streamlit :<a class="headerlink" href="#link-deployment-aplikasi-di-streamlit" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://klasifikasiberitadohan.streamlit.app/">https://klasifikasiberitadohan.streamlit.app/</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+
+<span class="c1"># Membaca dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hasil_stemming_stopwords.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Mengganti NaN dengan string kosong</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menginisialisasi TfidfVectorizer dengan normalisasi L2</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menghitung TF-IDF</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">])</span>
+
+<span class="c1"># Mengubah hasilnya menjadi DataFrame</span>
+<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+
+<span class="c1"># Menginisialisasi TruncatedSVD (SVD terpotong)</span>
+<span class="n">svd</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># n_components bisa diubah sesuai kebutuhan</span>
+
+<span class="c1"># Melakukan transformasi SVD pada matriks TF-IDF</span>
+<span class="n">svd_matrix</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">)</span>
+
+<span class="c1"># Mengubah hasil SVD menjadi DataFrame</span>
+<span class="n">svd_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">svd_matrix</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan 10 baris pertama dari DataFrame hasil SVD</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svd_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          0         1         2         3         4         5         6    \
+0    0.043425  0.041441  0.065806 -0.022927 -0.031531  0.010357 -0.016132   
+1    0.018521  0.031421  0.070840 -0.056315  0.053922  0.030727  0.021542   
+2    0.039736  0.056608  0.128047 -0.090967 -0.080503  0.033581 -0.037796   
+3    0.048502  0.106017  0.120635  0.002080 -0.069276  0.078695  0.018214   
+4    0.692231 -0.106538 -0.082801  0.024416  0.087970  0.159918 -0.022590   
+..        ...       ...       ...       ...       ...       ...       ...   
+195  0.104197  0.150240  0.058680 -0.053809  0.033729  0.049399 -0.031554   
+196  0.063672  0.074087  0.135030 -0.065522 -0.116738  0.040580 -0.060993   
+197  0.222571  0.626781 -0.276828 -0.041879  0.026486  0.029621  0.014324   
+198  0.160462  0.693643 -0.228039  0.056432  0.072830  0.012939 -0.009753   
+199  0.384101 -0.040513  0.063702 -0.005801 -0.008631 -0.137292  0.019538   
+
+          7         8         9    ...       190       191       192  \
+0   -0.002754  0.021363  0.012262  ... -0.000582  0.003295  0.000737   
+1    0.000464  0.006448  0.004234  ...  0.001376  0.000839  0.000572   
+2   -0.075040  0.061655  0.092661  ...  0.001385 -0.001915  0.001095   
+3   -0.136242 -0.032761  0.420345  ... -0.008604 -0.001400  0.005598   
+4    0.005877 -0.069685  0.058781  ...  0.005222 -0.007616  0.023228   
+..        ...       ...       ...  ...       ...       ...       ...   
+195 -0.038934 -0.016792  0.034879  ... -0.003172 -0.001438 -0.004489   
+196 -0.055248 -0.045808 -0.094270  ...  0.004960  0.002834 -0.000242   
+197 -0.009321  0.069010 -0.013257  ...  0.022132  0.013677  0.008800   
+198 -0.000843 -0.034611  0.025058  ... -0.068808 -0.054674 -0.024742   
+199  0.027132  0.089040 -0.054993  ... -0.004329  0.018371  0.006387   
+
+          193       194       195       196       197       198       199  
+0   -0.002057  0.002367 -0.001016  0.000421  0.003515 -0.000100  0.000906  
+1    0.000885 -0.003431  0.003731  0.000996 -0.000943 -0.000661 -0.000351  
+2    0.001036  0.001121  0.003594 -0.002096  0.002451  0.001548 -0.001017  
+3    0.006445 -0.013437  0.006412 -0.001752 -0.005157 -0.006088  0.001593  
+4   -0.054056 -0.097060  0.245777  0.069363 -0.089927 -0.030661 -0.005085  
+..        ...       ...       ...       ...       ...       ...       ...  
+195  0.001987  0.004817  0.003578 -0.000863  0.000318 -0.000413 -0.000076  
+196  0.000107  0.001641 -0.000807  0.000886  0.001340 -0.002395  0.001115  
+197  0.011007  0.007042  0.007128  0.013074 -0.008742  0.004545  0.000912  
+198 -0.039911 -0.001476 -0.011623 -0.043955 -0.016953 -0.011808 -0.003833  
+199  0.013891  0.012235 -0.010158 -0.008251  0.006958  0.003864 -0.008811  
+
+[200 rows x 200 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Link Deployment Tanpa Reduksi Dimensi :</p>
+<p><a class="reference external" href="https://huggingface.co/spaces/drhadityo9/news_classification_logistic_reg">https://huggingface.co/spaces/drhadityo9/news_classification_logistic_reg</a></p>
+<p>Link Deployment dengan Reduksi Dimensi :</p>
+<p><a class="reference external" href="https://huggingface.co/spaces/drhadityo9/classification_news_with_reduction">https://huggingface.co/spaces/drhadityo9/classification_news_with_reduction</a></p>
+</section>
 </section>
 </section>
 
@@ -2814,11 +3486,38 @@ Node dengan Betweenness Centrality tertinggi: 0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Klasifikasi Berita</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nama-dohan-rizqi-hadityo">Nama  : Dohan Rizqi Hadityo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-210411100195">NIM   : 210411100195</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelas-pencarian-dan-penambangan-web-a">Kelas : Pencarian dan Penambangan Web A</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-deployment-aplikasi-di-streamlit">Link deployment aplikasi di streamlit :</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-code-scraping-berita">Penjelasan Code Scraping Berita</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">1. Import Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#url-dan-struktur-data">2. URL dan Struktur Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rentang-tanggal-yang-ditentukan">3. Rentang Tanggal yang Ditentukan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-scraping">4. Proses Scraping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-dan-pengambilan-data">5. Parsing dan Pengambilan Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyaringan-berdasarkan-tanggal-dan-kategori">6. Penyaringan Berdasarkan Tanggal dan Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-data-artikel">7. Menyimpan Data Artikel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-dan-menampilkan-data-dalam-dataframe">8. Menyimpan dan Menampilkan Data dalam DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-jumlah-artikel-per-kategori">9. Menampilkan Jumlah Artikel per Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengonversi-data-ke-dalam-dataframe">1. Mengonversi Data ke dalam DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menambahkan-kolom-penomoran">2. Menambahkan Kolom Penomoran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-artikel-berdasarkan-kategori">3. Menghitung Jumlah Artikel Berdasarkan Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-perhitungan">4. Menampilkan Hasil Perhitungan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-artikel-per-kategori">1. Menghitung Jumlah Artikel per Kategori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-grafik-batang">2. Menampilkan Grafik Batang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menambahkan-judul-dan-label">3. Menambahkan Judul dan Label</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyesuaikan-tampilan-dan-menampilkan-grafik">4. Menyesuaikan Tampilan dan Menampilkan Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-nama-fitur-kata-token-dari-tfidfvectorizer-dan-menyimpannya-dalam-variabel-fitur-kata">Mengambil nama fitur kata (token) dari TfidfVectorizer dan menyimpannya dalam variabel fitur_kata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#link-deployment-aplikasi-di-streamlit">Link deployment aplikasi di streamlit :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
@@ -2866,8 +3565,8 @@ By Dohan Rizqi Hadityo 210411100195
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

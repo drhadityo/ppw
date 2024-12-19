@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Pencarian dan Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 7_Clustering berita';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="Tugas%205_Query%20dengan%20Kalimat.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/PAS FOTO.jpg" class="logo__image only-light" alt="Pencarian dan Penambangan Web - Home"/>
+    <img src="_static/PAS FOTO.jpg" class="logo__image only-dark pst-js-only" alt="Pencarian dan Penambangan Web - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas%201%20PPW.html">Konsep Crawling dan Contoh</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202%20PPW.html">Klasifikasi Berita</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="konsep%20word%20embedding.html">Konsep Word Embedding</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Tugas%20Crawling%20Artikel.html">Crawling Artikel (Graph)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas 7_Clustering berita.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Tugas 7_Clustering berita.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="kn">from</span> <span class="nn">fcmeans</span> <span class="kn">import</span> <span class="n">FCM</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-1-33c906567edb&gt;</span> in <span class="ni">&lt;cell line: 8&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;Sastrawi&#39;
+
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NOTE</span>: If your import is failing due to a missing package, you can
+<span class="n">manually</span> <span class="n">install</span> <span class="n">dependencies</span> <span class="n">using</span> <span class="n">either</span> <span class="o">!</span>pip<span class="w"> </span>or<span class="w"> </span>!apt.
+
+<span class="n">To</span> <span class="n">view</span> <span class="n">examples</span> <span class="n">of</span> <span class="n">installing</span> <span class="n">some</span> <span class="n">common</span> <span class="n">dependencies</span><span class="p">,</span> <span class="n">click</span> <span class="n">the</span>
+<span class="s2">&quot;Open Examples&quot;</span> <span class="n">button</span> <span class="n">below</span><span class="o">.</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\dohan\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\dohan\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;berita_kompas_sample.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No</th>
+      <th>Judul Berita</th>
+      <th>Isi Berita</th>
+      <th>Tanggal Berita</th>
+      <th>Kategori Berita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Banyak Serangga Keluar dari Tempat Pengembalia...</td>
+      <td>DETROIT, KOMPAS.com - Sebuah perpustakaan di p...</td>
+      <td>25/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Benarkah Petir Bisa Menyambar Lebih dari Sekal...</td>
+      <td>KOMPAS.com - Unggahan di media sosial menyebut...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Studi: Dampak Jangka Panjang Covid-19 pada Ota...</td>
+      <td>KOMPAS.com - Penelitian baru mengungkapkan, or...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Bukan Sunita Williams, Ini 2 Astronot yang Tin...</td>
+      <td>KOMPAS.com - Dua astronot Badan Penerbangan da...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Balas Serangan Israel, Hizbullah Klaim Tembakk...</td>
+      <td>KOMPAS.com - Kelompok Hizbullah mengeklaim ber...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>196</td>
+      <td>Angkatan Laut AS Minta Maaf atas Penghancuran ...</td>
+      <td>WASHINGTON DC, KOMPAS.com - Dalam sebuah upaca...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>197</td>
+      <td>Polisi Malaysia Tangkap 355 Orang terkait Kasu...</td>
+      <td>KUALA LUMPUR, KOMPAS.com - Polisi Malaysia men...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>198</td>
+      <td>Rangkuman Hari Ke-941 Serangan Rusia ke Ukrain...</td>
+      <td>KYIV, KOMPAS.com - Masih ada beberapa hal baru...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>199</td>
+      <td>Bujuk Rayu Zelensky pada Biden Jelang Berakhir...</td>
+      <td>KYIV, KOMPAS.com - Volodymyr Zelensky mendesak...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>200</td>
+      <td>Pasukan Israel Geruduk Kantor Media Al Jazeera...</td>
+      <td>TEPI BARAT, KOMPAS.com - Stasiun televisi yan...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Text Preprocessing Functions</span>
+<span class="k">def</span> <span class="nf">casefolding</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">cleansing</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\x00-\x7F]+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+
+<span class="c1"># Stemming with Sastrawi</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">stem_text</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Cleansing&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Isi Berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">casefolding</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">cleansing</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenized_text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Cleansing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize_wrapper</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;no_stopwords_text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokenized_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_stopwords</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;stemmed_text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;no_stopwords_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stem_text</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;stemmed_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan beberapa baris pertama dari setiap kolom yang telah dihasilkan</span>
+<span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Isi Berita&#39;</span><span class="p">,</span> <span class="s1">&#39;Cleansing&#39;</span><span class="p">,</span> <span class="s1">&#39;tokenized_text&#39;</span><span class="p">,</span> <span class="s1">&#39;no_stopwords_text&#39;</span><span class="p">,</span> <span class="s1">&#39;stemmed_text&#39;</span><span class="p">,</span> <span class="s1">&#39;final_text&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Isi Berita</th>
+      <th>Cleansing</th>
+      <th>tokenized_text</th>
+      <th>no_stopwords_text</th>
+      <th>stemmed_text</th>
+      <th>final_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DETROIT, KOMPAS.com - Sebuah perpustakaan di p...</td>
+      <td>detroit kompascom sebuah perpustakaan di pingg...</td>
+      <td>[detroit, kompascom, sebuah, perpustakaan, di,...</td>
+      <td>[detroit, kompascom, perpustakaan, pinggiran, ...</td>
+      <td>[detroit, kompascom, pustaka, pinggir, kota, d...</td>
+      <td>detroit kompascom pustaka pinggir kota detroit...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>KOMPAS.com - Unggahan di media sosial menyebut...</td>
+      <td>kompascom unggahan di media sosial menyebut pe...</td>
+      <td>[kompascom, unggahan, di, media, sosial, menye...</td>
+      <td>[kompascom, unggahan, media, sosial, menyebut,...</td>
+      <td>[kompascom, unggah, media, sosial, sebut, peti...</td>
+      <td>kompascom unggah media sosial sebut petir samb...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>KOMPAS.com - Penelitian baru mengungkapkan, or...</td>
+      <td>kompascompenelitian baru mengungkapkan orang y...</td>
+      <td>[kompascompenelitian, baru, mengungkapkan, ora...</td>
+      <td>[kompascompenelitian, orang, dirawat, rumah, s...</td>
+      <td>[kompascompenelitian, orang, rawat, rumah, sak...</td>
+      <td>kompascompenelitian orang rawat rumah sakit in...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KOMPAS.com - Dua astronot Badan Penerbangan da...</td>
+      <td>kompascom dua astronot badan penerbangan dan a...</td>
+      <td>[kompascom, dua, astronot, badan, penerbangan,...</td>
+      <td>[kompascom, astronot, badan, penerbangan, anta...</td>
+      <td>[kompascom, astronot, badan, terbang, antariks...</td>
+      <td>kompascom astronot badan terbang antariksa ame...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>KOMPAS.com - Kelompok Hizbullah mengeklaim ber...</td>
+      <td>kompascom kelompok hizbullah mengeklaim berhas...</td>
+      <td>[kompascom, kelompok, hizbullah, mengeklaim, b...</td>
+      <td>[kompascom, kelompok, hizbullah, mengeklaim, b...</td>
+      <td>[kompascom, kelompok, hizbullah, klaim, hasil,...</td>
+      <td>kompascom kelompok hizbullah klaim hasil seran...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghapus kolom kategori langsung dari DataFrame asli</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Kategori Berita&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No</th>
+      <th>Judul Berita</th>
+      <th>Isi Berita</th>
+      <th>Tanggal Berita</th>
+      <th>Cleansing</th>
+      <th>tokenized_text</th>
+      <th>no_stopwords_text</th>
+      <th>stemmed_text</th>
+      <th>final_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Banyak Serangga Keluar dari Tempat Pengembalia...</td>
+      <td>DETROIT, KOMPAS.com - Sebuah perpustakaan di p...</td>
+      <td>25/09/2024</td>
+      <td>detroit kompascom sebuah perpustakaan di pingg...</td>
+      <td>[detroit, kompascom, sebuah, perpustakaan, di,...</td>
+      <td>[detroit, kompascom, perpustakaan, pinggiran, ...</td>
+      <td>[detroit, kompascom, pustaka, pinggir, kota, d...</td>
+      <td>detroit kompascom pustaka pinggir kota detroit...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Benarkah Petir Bisa Menyambar Lebih dari Sekal...</td>
+      <td>KOMPAS.com - Unggahan di media sosial menyebut...</td>
+      <td>25/09/2024</td>
+      <td>kompascom unggahan di media sosial menyebut pe...</td>
+      <td>[kompascom, unggahan, di, media, sosial, menye...</td>
+      <td>[kompascom, unggahan, media, sosial, menyebut,...</td>
+      <td>[kompascom, unggah, media, sosial, sebut, peti...</td>
+      <td>kompascom unggah media sosial sebut petir samb...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Studi: Dampak Jangka Panjang Covid-19 pada Ota...</td>
+      <td>KOMPAS.com - Penelitian baru mengungkapkan, or...</td>
+      <td>25/09/2024</td>
+      <td>kompascompenelitian baru mengungkapkan orang y...</td>
+      <td>[kompascompenelitian, baru, mengungkapkan, ora...</td>
+      <td>[kompascompenelitian, orang, dirawat, rumah, s...</td>
+      <td>[kompascompenelitian, orang, rawat, rumah, sak...</td>
+      <td>kompascompenelitian orang rawat rumah sakit in...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Bukan Sunita Williams, Ini 2 Astronot yang Tin...</td>
+      <td>KOMPAS.com - Dua astronot Badan Penerbangan da...</td>
+      <td>25/09/2024</td>
+      <td>kompascom dua astronot badan penerbangan dan a...</td>
+      <td>[kompascom, dua, astronot, badan, penerbangan,...</td>
+      <td>[kompascom, astronot, badan, penerbangan, anta...</td>
+      <td>[kompascom, astronot, badan, terbang, antariks...</td>
+      <td>kompascom astronot badan terbang antariksa ame...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Balas Serangan Israel, Hizbullah Klaim Tembakk...</td>
+      <td>KOMPAS.com - Kelompok Hizbullah mengeklaim ber...</td>
+      <td>25/09/2024</td>
+      <td>kompascom kelompok hizbullah mengeklaim berhas...</td>
+      <td>[kompascom, kelompok, hizbullah, mengeklaim, b...</td>
+      <td>[kompascom, kelompok, hizbullah, mengeklaim, b...</td>
+      <td>[kompascom, kelompok, hizbullah, klaim, hasil,...</td>
+      <td>kompascom kelompok hizbullah klaim hasil seran...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="c1"># Fungsi untuk menghitung frekuensi kata dalam teks</span>
+<span class="k">def</span> <span class="nf">freq_term_func</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># Memisahkan teks menjadi token (misalnya, berdasarkan spasi)</span>
+    <span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>  <span class="c1"># Mengembalikan frekuensi setiap token dalam bentuk Counter</span>
+
+<span class="c1"># Menghitung frekuensi token untuk setiap entri dalam kolom &#39;final_text&#39;</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;freq_term_&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">freq_term_func</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan 10 hasil teratas dari frekuensi token</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Frekuensi token : </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;freq_term_&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">most_common</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Frekuensi token : 
+
+0    [(kembali, 5), (serangga, 5), (pustaka, 4), (d...
+1    [(petir, 14), (sambar, 14), (titik, 6), (kali,...
+2    [(covid, 13), (rawat, 7), (otak, 7), (kognitif...
+3    [(astronot, 9), (iss, 7), (angkasa, 6), (tingg...
+4    [(israel, 14), (lebanon, 11), (serang, 10), (h...
+5    [(daging, 26), (meltique, 9), (marbling, 8), (...
+6    [(thailand, 9), (nikah, 7), (jenis, 6), (undan...
+7    [(kereta, 15), (lintas, 11), (api, 9), (palang...
+8    [(orang, 8), (israel, 7), (lebanon, 7), (seran...
+9    [(oxford, 8), (aztec, 7), (universitas, 6), (t...
+Name: freq_term_, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data_berita_telah_di_preprocessing.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;berita_kompas_sample.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No</th>
+      <th>Judul Berita</th>
+      <th>Isi Berita</th>
+      <th>Tanggal Berita</th>
+      <th>Kategori Berita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Banyak Serangga Keluar dari Tempat Pengembalia...</td>
+      <td>DETROIT, KOMPAS.com - Sebuah perpustakaan di p...</td>
+      <td>25/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Benarkah Petir Bisa Menyambar Lebih dari Sekal...</td>
+      <td>KOMPAS.com - Unggahan di media sosial menyebut...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Studi: Dampak Jangka Panjang Covid-19 pada Ota...</td>
+      <td>KOMPAS.com - Penelitian baru mengungkapkan, or...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Bukan Sunita Williams, Ini 2 Astronot yang Tin...</td>
+      <td>KOMPAS.com - Dua astronot Badan Penerbangan da...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Balas Serangan Israel, Hizbullah Klaim Tembakk...</td>
+      <td>KOMPAS.com - Kelompok Hizbullah mengeklaim ber...</td>
+      <td>25/09/2024</td>
+      <td>tren</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>196</td>
+      <td>Angkatan Laut AS Minta Maaf atas Penghancuran ...</td>
+      <td>WASHINGTON DC, KOMPAS.com - Dalam sebuah upaca...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>197</td>
+      <td>Polisi Malaysia Tangkap 355 Orang terkait Kasu...</td>
+      <td>KUALA LUMPUR, KOMPAS.com - Polisi Malaysia men...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>198</td>
+      <td>Rangkuman Hari Ke-941 Serangan Rusia ke Ukrain...</td>
+      <td>KYIV, KOMPAS.com - Masih ada beberapa hal baru...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>199</td>
+      <td>Bujuk Rayu Zelensky pada Biden Jelang Berakhir...</td>
+      <td>KYIV, KOMPAS.com - Volodymyr Zelensky mendesak...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>200</td>
+      <td>Pasukan Israel Geruduk Kantor Media Al Jazeera...</td>
+      <td>TEPI BARAT, KOMPAS.com - Stasiun televisi yan...</td>
+      <td>22/09/2024</td>
+      <td>global</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_prep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data_berita_telah_di_preprocessing.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;final_text&quot;</span><span class="p">])</span>
+
+<span class="n">data_prep</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>final_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>detroit kompascom pustaka pinggir kota detroit...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>kompascom unggah media sosial sebut petir samb...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>kompascompenelitian orang rawat rumah sakit in...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>kompascom astronot badan terbang antariksa ame...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>kompascom kelompok hizbullah klaim hasil seran...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>kompascom unggah isi cerita warganet beli stea...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>bangkok kompascom raja thailand maha vajiralon...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>kompascom kendara kerap terobos palang lintas ...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>beirut kompascom korban tewas akibat serang ud...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>kompascom ajar oxford universitas oxford kemba...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>kompascom inggris warga lebanon tinggal negara...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>kompascom masyarakat ubah status tanah hak ban...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>kompascom lini media sosial ramai unggah video...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>kompascom nasa barubaru temu tarik muka mars r...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>tulis voa indonesia singapura kompascom mantan...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>kompascom video rekam pria tegur tugas ambulan...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>kompascom kelompok monyet hasil selamat anak p...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>kompascom ilmuwan kelompok darah manusia dunia...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>kompascom kampanye pilih kepala daerah pilkada...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>kompascom albert einstein salah pikir besar ab...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+
+<span class="c1"># Calculate TF-IDF matrix</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data_prep</span><span class="p">[</span><span class="s1">&#39;final_text&#39;</span><span class="p">])</span>
+
+<span class="c1"># Convert TF-IDF matrix to DataFrame for better readability</span>
+<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+
+<span class="c1"># Display the first few rows of the TF-IDF table</span>
+<span class="n">tfidf_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ab</th>
+      <th>abad</th>
+      <th>abadi</th>
+      <th>abah</th>
+      <th>abai</th>
+      <th>abba</th>
+      <th>abbas</th>
+      <th>abbasiyah</th>
+      <th>abc</th>
+      <th>abdallah</th>
+      <th>...</th>
+      <th>zelzal</th>
+      <th>ziad</th>
+      <th>zimbabwe</th>
+      <th>zionis</th>
+      <th>zionisme</th>
+      <th>zoe</th>
+      <th>zom</th>
+      <th>zona</th>
+      <th>zoologi</th>
+      <th>zullies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.048416</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 5723 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf_array</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;tfidf_vectorizer_cluster.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tfidf_vectorizer</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TF-IDF Vectorizer telah disimpan ke tfidf_vectorizer.pkl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF Vectorizer telah disimpan ke tfidf_vectorizer.pkl
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+
+<span class="n">fcm</span> <span class="o">=</span> <span class="n">FCM</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fcm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tfidf_array</span><span class="p">)</span>
+
+<span class="c1"># Get fuzzy membership probabilities and hard labels for each document</span>
+<span class="n">fuzzy_membership</span> <span class="o">=</span> <span class="n">fcm</span><span class="o">.</span><span class="n">u</span>
+<span class="n">hard_labels</span> <span class="o">=</span> <span class="n">fcm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tfidf_array</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Convert results to DataFrame</span>
+<span class="n">cluster_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Document&quot;</span><span class="p">:</span> <span class="n">data_prep</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+    <span class="s2">&quot;Cluster&quot;</span><span class="p">:</span> <span class="n">hard_labels</span><span class="p">,</span>
+    <span class="s2">&quot;Membership_Cluster_1&quot;</span><span class="p">:</span> <span class="n">fuzzy_membership</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="s2">&quot;Membership_Cluster_2&quot;</span><span class="p">:</span> <span class="n">fuzzy_membership</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Display clustering results</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cluster_results</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Document  Cluster  Membership_Cluster_1  Membership_Cluster_2
+0         0        1                   0.5                   0.5
+1         1        1                   0.5                   0.5
+2         2        1                   0.5                   0.5
+3         3        1                   0.5                   0.5
+4         4        0                   0.5                   0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+
+<span class="c1"># Step 1: Reduce dimensions of TF-IDF data to 2D using SVD</span>
+<span class="n">svd</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">tfidf_2d</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tfidf_array</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Plotting the clusters</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="c1"># Assign colors based on cluster labels</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">cluster</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="n">tfidf_2d</span><span class="p">[</span><span class="n">hard_labels</span> <span class="o">==</span> <span class="n">cluster</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+        <span class="n">tfidf_2d</span><span class="p">[</span><span class="n">hard_labels</span> <span class="o">==</span> <span class="n">cluster</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">cluster</span><span class="p">],</span> 
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Cluster </span><span class="si">{</span><span class="n">cluster</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> 
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span>
+    <span class="p">)</span>
+
+<span class="c1"># Step 3: Label and show plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Fuzzy C-Means Clustering of Documents (SVD-reduced TF-IDF)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;SVD Component 1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;SVD Component 2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/496eb1cb97a47bb01688f65d02a8e803f3243e0a89f33087cef8856a1b596d7c.png" src="_images/496eb1cb97a47bb01688f65d02a8e803f3243e0a89f33087cef8856a1b596d7c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
+
+<span class="c1"># Calculate Silhouette Score using the TF-IDF array and hard cluster labels</span>
+<span class="n">silhouette_avg</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">tfidf_array</span><span class="p">,</span> <span class="n">hard_labels</span><span class="p">)</span>
+
+<span class="c1"># Display the Silhouette Score</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Silhouette Score for Fuzzy C-Means Clustering: </span><span class="si">{</span><span class="n">silhouette_avg</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score for Fuzzy C-Means Clustering: 0.0484
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Mendapatkan indeks dokumen untuk setiap kluster</span>
+<span class="n">cluster_0_docs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">hard_labels</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">cluster_1_docs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">hard_labels</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Menghitung rata-rata TF-IDF untuk setiap kata di setiap kluster</span>
+<span class="n">tfidf_cluster_0</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">cluster_0_docs</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">A1</span>
+<span class="n">tfidf_cluster_1</span> <span class="o">=</span> <span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">cluster_1_docs</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">A1</span>
+
+<span class="c1"># Mendapatkan fitur kata</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+
+<span class="c1"># Mengambil 10 term teratas untuk masing-masing kluster</span>
+<span class="n">top_terms_cluster_0</span> <span class="o">=</span> <span class="p">[</span><span class="n">terms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tfidf_cluster_0</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">10</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">top_terms_cluster_1</span> <span class="o">=</span> <span class="p">[</span><span class="n">terms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tfidf_cluster_1</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">10</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top terms in Cluster 0:&quot;</span><span class="p">,</span> <span class="n">top_terms_cluster_0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top terms in Cluster 1:&quot;</span><span class="p">,</span> <span class="n">top_terms_cluster_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Top terms in Cluster 0: [&#39;israel&#39;, &#39;lebanon&#39;, &#39;hizbullah&#39;, &#39;serang&#39;, &#39;militer&#39;, &#39;tewas&#39;, &#39;gaza&#39;, &#39;perang&#39;, &#39;orang&#39;, &#39;warga&#39;]
+Top terms in Cluster 1: [&#39;ukraina&#39;, &#39;rusia&#39;, &#39;presiden&#39;, &#39;baca&#39;, &#39;orang&#39;, &#39;indonesia&#39;, &#39;temu&#39;, &#39;negara&#39;, &#39;hujan&#39;, &#39;zelensky&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualisasi distribusi dokumen dalam setiap kluster</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">hard_labels</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>  <span class="c1"># Gunakan satu warna saja</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Document Distribution Across Clusters&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Documents&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Cluster 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Cluster 2&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5548cf53c52dd85637373bdf19d159e871db3fc787d0ae383a1e0eb974c38d62.png" src="_images/5548cf53c52dd85637373bdf19d159e871db3fc787d0ae383a1e0eb974c38d62.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Simpan model FCM menggunakan pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fcm_model_new.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">fcm</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="c1"># Simpan hasil clustering ke file CSV</span>
+<span class="n">cluster_results</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;cluster_results.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Link Deployment Aplikasi Clustering Berita :</p>
+<p><a class="reference external" href="https://huggingface.co/spaces/drhadityo9/cluster_news_dohan">https://huggingface.co/spaces/drhadityo9/cluster_news_dohan</a></p>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas%205_Query%20dengan%20Kalimat.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dohan Rizqi Hadityo 210411100195
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

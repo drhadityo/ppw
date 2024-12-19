@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,10 +39,10 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -172,6 +172,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201%20PPW.html">Konsep Crawling dan Contoh</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202%20PPW.html">Klasifikasi Berita</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="konsep%20word%20embedding.html">Konsep Word Embedding</a></li>
 
 
@@ -185,9 +186,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -436,7 +442,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b0946d26-660a-4adc-bd52-a06772a32106" class="colab-df-container">
+  <div id="df-de80242d-e644-410c-ac9f-054ff6f9b931" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -473,7 +479,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b0946d26-660a-4adc-bd52-a06772a32106')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-de80242d-e644-410c-ac9f-054ff6f9b931')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -525,12 +531,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b0946d26-660a-4adc-bd52-a06772a32106 button.colab-df-convert');
+        document.querySelector('#df-de80242d-e644-410c-ac9f-054ff6f9b931 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b0946d26-660a-4adc-bd52-a06772a32106');
+        const element = document.querySelector('#df-de80242d-e644-410c-ac9f-054ff6f9b931');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -553,6 +559,53 @@
   </div>
   </div></div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">url</span> <span class="pre">=</span> <span class="pre">'https://www.idntimes.com/sport/soccer/sandy-firdaus/sebelum-gabung-timnas-indonesia-mees-hilgers-lawan-mourinho'</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendefinisikan URL dari artikel sepak bola di IDN Times yang akan di-scrape.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">response</span> <span class="pre">=</span> <span class="pre">requests.get(url)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengirim permintaan HTTP GET ke URL untuk mengambil halaman web.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">soup</span> <span class="pre">=</span> <span class="pre">BeautifulSoup(response.text,</span> <span class="pre">'html.parser')</span></code></strong></p>
+<ul class="simple">
+<li><p>Memparsing halaman web menggunakan BeautifulSoup untuk memudahkan pengambilan data HTML.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">title</span> <span class="pre">=</span> <span class="pre">soup.find('h1').get_text().strip()</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengambil judul artikel (elemen <code class="docutils literal notranslate"><span class="pre">h1</span></code>) dan membersihkan spasi berlebih.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">=</span> <span class="pre">soup.find('time').get_text().strip()</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengambil tanggal publikasi artikel (elemen <code class="docutils literal notranslate"><span class="pre">time</span></code>) dan membersihkan spasi.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">content</span> <span class="pre">=</span> <span class="pre">soup.find_all('p')</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengambil semua paragraf artikel (elemen <code class="docutils literal notranslate"><span class="pre">p</span></code>), kemudian menyusun kembali menjadi teks utuh.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">artikel_mees.append({'Title':</span> <span class="pre">title,</span> <span class="pre">'Date':</span> <span class="pre">date,</span> <span class="pre">'Content':</span> <span class="pre">article_text})</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyimpan data artikel yang telah diambil ke dalam list <code class="docutils literal notranslate"><span class="pre">artikel_mees</span></code> dalam format dictionary.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_mees</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(artikel_mees)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat DataFrame dari list dictionary <code class="docutils literal notranslate"><span class="pre">artikel_mees</span></code> untuk analisis lebih lanjut.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_mees</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan DataFrame berisi artikel yang telah di-scrape.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
@@ -591,7 +644,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-33938e13-4ca6-47e8-adc6-bcd2b21c8037" class="colab-df-container">
+  <div id="df-8350a354-283c-4ba7-bfa2-7af5517b9117" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -628,7 +681,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-33938e13-4ca6-47e8-adc6-bcd2b21c8037')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8350a354-283c-4ba7-bfa2-7af5517b9117')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -680,12 +733,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-33938e13-4ca6-47e8-adc6-bcd2b21c8037 button.colab-df-convert');
+        document.querySelector('#df-8350a354-283c-4ba7-bfa2-7af5517b9117 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-33938e13-4ca6-47e8-adc6-bcd2b21c8037');
+        const element = document.querySelector('#df-8350a354-283c-4ba7-bfa2-7af5517b9117');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -708,6 +761,38 @@
   </div>
   </div></div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">casefolding(Content):</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendefinisikan fungsi <code class="docutils literal notranslate"><span class="pre">casefolding</span></code> untuk mengubah teks menjadi huruf kecil (case folding).</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">isinstance(Content,</span> <span class="pre">list):</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengecek apakah input <code class="docutils literal notranslate"><span class="pre">Content</span></code> adalah list. Jika ya, maka case folding diterapkan pada setiap elemen list.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">[str(item).lower()</span> <span class="pre">for</span> <span class="pre">item</span> <span class="pre">in</span> <span class="pre">Content]</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengembalikan list yang berisi setiap elemen <code class="docutils literal notranslate"><span class="pre">Content</span></code> dalam bentuk huruf kecil.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">else:</span> <span class="pre">return</span> <span class="pre">str(Content).lower()</span></code></strong></p>
+<ul class="simple">
+<li><p>Jika input bukan list, mengembalikan teks yang telah diubah menjadi huruf kecil.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_mees['Content']</span> <span class="pre">=</span> <span class="pre">data_mees['Content'].apply(casefolding)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menerapkan fungsi <code class="docutils literal notranslate"><span class="pre">casefolding</span></code> pada kolom <code class="docutils literal notranslate"><span class="pre">Content</span></code> di DataFrame <code class="docutils literal notranslate"><span class="pre">data_mees</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_mees.head()</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan lima baris pertama dari DataFrame untuk melihat hasil case folding.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_filename</span> <span class="o">=</span> <span class="s2">&quot;artikel_mees_hilgers.csv&quot;</span>
@@ -732,7 +817,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f67bda19-97ca-446e-b282-bb66fd4a7685" class="colab-df-container">
+  <div id="df-695d0b0d-95d6-4b5d-b917-42c4ccb2b5ee" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -769,7 +854,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-f67bda19-97ca-446e-b282-bb66fd4a7685')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-695d0b0d-95d6-4b5d-b917-42c4ccb2b5ee')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -821,12 +906,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-f67bda19-97ca-446e-b282-bb66fd4a7685 button.colab-df-convert');
+        document.querySelector('#df-695d0b0d-95d6-4b5d-b917-42c4ccb2b5ee button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-f67bda19-97ca-446e-b282-bb66fd4a7685');
+        const element = document.querySelector('#df-695d0b0d-95d6-4b5d-b917-42c4ccb2b5ee');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -882,7 +967,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f692a174-85e1-4965-9345-346bdd266cb4" class="colab-df-container">
+  <div id="df-05647e5d-3128-4ca9-b461-730c57018e6a" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -919,7 +1004,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-f692a174-85e1-4965-9345-346bdd266cb4')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-05647e5d-3128-4ca9-b461-730c57018e6a')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -971,12 +1056,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-f692a174-85e1-4965-9345-346bdd266cb4 button.colab-df-convert');
+        document.querySelector('#df-05647e5d-3128-4ca9-b461-730c57018e6a button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-f692a174-85e1-4965-9345-346bdd266cb4');
+        const element = document.querySelector('#df-05647e5d-3128-4ca9-b461-730c57018e6a');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -999,6 +1084,53 @@
   </div>
   </div></div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cleansing(Content):</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendefinisikan fungsi <code class="docutils literal notranslate"><span class="pre">cleansing</span></code> untuk membersihkan teks dari berbagai karakter yang tidak diinginkan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">=</span> <span class="pre">Content.strip()</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus whitespace di awal dan akhir teks.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">=</span> <span class="pre">re.sub(f&quot;[{string.punctuation}]&quot;,</span> <span class="pre">'',</span> <span class="pre">Content)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus semua tanda baca dan karakter khusus dari teks.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">=</span> <span class="pre">re.sub(r'\d+',</span> <span class="pre">'',</span> <span class="pre">Content)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus angka dari teks.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">=</span> <span class="pre">re.sub(r&quot;\b[a-zA-Z]\b&quot;,</span> <span class="pre">&quot;&quot;,</span> <span class="pre">Content)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus huruf tunggal (opsional).</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">=</span> <span class="pre">re.sub(r'[^\x00-\x7F]+',</span> <span class="pre">'',</span> <span class="pre">Content)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus karakter non-standar seperti karakter khusus dan simbol.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">=</span> <span class="pre">re.sub(r'\s+',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">Content)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus spasi ganda dari teks.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_mees['Content']</span> <span class="pre">=</span> <span class="pre">data_mees['Content'].apply(cleansing)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menerapkan fungsi <code class="docutils literal notranslate"><span class="pre">cleansing</span></code> pada kolom <code class="docutils literal notranslate"><span class="pre">Content</span></code> di DataFrame <code class="docutils literal notranslate"><span class="pre">data_mees</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">data_mees.head(5)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan lima baris pertama dari DataFrame untuk memverifikasi hasil pembersihan teks.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
@@ -1009,9 +1141,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data]   Package punkt is already up-to-date!
 </pre></div>
 </div>
 </div>
@@ -1039,217 +1169,108 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-6d21a866-0843-419a-83ac-951b3da599b8" class="colab-df-container">
-    <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">LookupError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-9-f80954954a9a&gt;</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Ekstraksi kalimat dari konten artikel</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">sentences</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">article_text</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Tokenisasi tiap kalimat menjadi term</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/tokenize/__init__.py</span> in <span class="ni">sent_tokenize</span><span class="nt">(text, language)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="p">:</span><span class="n">param</span> <span class="n">language</span><span class="p">:</span> <span class="n">the</span> <span class="n">model</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Punkt</span> <span class="n">corpus</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">119</span><span class="sd">     tokenizer = _get_punkt_tokenizer(language)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span><span class="sd">     return tokenizer.tokenize(text)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span><span class="sd"> </span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sentence</th>
-      <th>Terms</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...</td>
-      <td>[Regional, Kategori, Event, DOWNLOAD, IDN, APP...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Jakarta, IDN Times - Mees Hilgers akan menghad...</td>
-      <td>[Jakarta, ,, IDN, Times, -, Mees, Hilgers, aka...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Dia dijadwalkan akan bersua Fenerbahce, tim ya...</td>
-      <td>[Dia, dijadwalkan, akan, bersua, Fenerbahce, ,...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Jadi, Twente akan bersua Fenerbahce di markasn...</td>
-      <td>[Jadi, ,, Twente, akan, bersua, Fenerbahce, di...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Setelah merasakan kekuatan Manchester United, ...</td>
-      <td>[Setelah, merasakan, kekuatan, Manchester, Uni...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Pada laga pertama Liga Europa, Hilgers bermain...</td>
-      <td>[Pada, laga, pertama, Liga, Europa, ,, Hilgers...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Kini, mereka sudah dihadapkan pada lawan kuat ...</td>
-      <td>[Kini, ,, mereka, sudah, dihadapkan, pada, law...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Saat ini, Fenerbahce diperkuat beberapa pemain...</td>
-      <td>[Saat, ini, ,, Fenerbahce, diperkuat, beberapa...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Mereka juga dilatih oleh Mourinho, juru taktik...</td>
-      <td>[Mereka, juga, dilatih, oleh, Mourinho, ,, jur...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Menghadapi sederet pemain hebat, ditambah keha...</td>
-      <td>[Menghadapi, sederet, pemain, hebat, ,, ditamb...</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Selain itu, ada laga besar lain yang juga mena...</td>
-      <td>[Selain, itu, ,, ada, laga, besar, lain, yang,...</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Baca Juga: Hilgers dan Reijnders Bisa Debut sa...</td>
-      <td>[Baca, Juga, :, Hilgers, dan, Reijnders, Bisa,...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Mereka akan jumpa salah satu tim kuat asal Rot...</td>
-      <td>[Mereka, akan, jumpa, salah, satu, tim, kuat, ...</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Pertandingan ini juga penting bagi Twente, kar...</td>
-      <td>[Pertandingan, ini, juga, penting, bagi, Twent...</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Selain itu, kemenangan atas Feyenoord akan mem...</td>
-      <td>[Selain, itu, ,, kemenangan, atas, Feyenoord, ...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Bersua Mourinho dan Feyenoord jadi bekal besar...</td>
-      <td>[Bersua, Mourinho, dan, Feyenoord, jadi, bekal...</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Apalagi, jika dia mampu meraih hasil positif d...</td>
-      <td>[Apalagi, ,, jika, dia, mampu, meraih, hasil, ...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Mourinho membawa Fenerbahce meraih kemenangan ...</td>
-      <td>[Mourinho, membawa, Fenerbahce, meraih, kemena...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Nah, mampukah Twente dan Hilgers menghentikan ...</td>
-      <td>[Nah, ,, mampukah, Twente, dan, Hilgers, mengh...</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Baca Juga: Daftar 27 Pemain Timnas Hadapi Bahr...</td>
-      <td>[Baca, Juga, :, Daftar, 27, Pemain, Timnas, Ha...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-    <div class="colab-df-buttons">
-      
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-6d21a866-0843-419a-83ac-951b3da599b8')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-      
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-    
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
+<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/tokenize/__init__.py</span> in <span class="ni">_get_punkt_tokenizer</span><span class="nt">(language)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span><span class="sd">     :type language: str</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">105</span>     <span class="k">return</span> <span class="n">PunktTokenizer</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span> 
+<span class="g g-Whitespace">    </span><span class="mi">107</span> 
 
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
+<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/tokenize/punkt.py</span> in <span class="ni">__init__</span><span class="nt">(self, lang)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1743</span>         <span class="n">PunktSentenceTokenizer</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1744</span>         <span class="bp">self</span><span class="o">.</span><span class="n">load_lang</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1745</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1746</span>     <span class="k">def</span> <span class="nf">load_lang</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">):</span>
 
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
+<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/tokenize/punkt.py</span> in <span class="ni">load_lang</span><span class="nt">(self, lang)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1747</span>         <span class="kn">from</span> <span class="nn">nltk.data</span> <span class="kn">import</span> <span class="n">find</span>
+<span class="g g-Whitespace">   </span><span class="mi">1748</span> 
+<span class="ne">-&gt; </span><span class="mi">1749</span>         <span class="n">lang_dir</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;tokenizers/punkt_tab/</span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1750</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_params</span> <span class="o">=</span> <span class="n">load_punkt_params</span><span class="p">(</span><span class="n">lang_dir</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1751</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_lang</span> <span class="o">=</span> <span class="n">lang</span>
 
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
+<span class="nn">/usr/local/lib/python3.10/dist-packages/nltk/data.py</span> in <span class="ni">find</span><span class="nt">(resource_name, paths)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span>     <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="mi">70</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="n">resource_not_found</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">sep</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">sep</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">579</span>     <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="n">resource_not_found</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">580</span> 
+<span class="g g-Whitespace">    </span><span class="mi">581</span> 
 
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
+<span class="ne">LookupError</span>: 
+<span class="o">**********************************************************************</span>
+  <span class="n">Resource</span> <span class="n">punkt_tab</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
+  <span class="n">Please</span> <span class="n">use</span> <span class="n">the</span> <span class="n">NLTK</span> <span class="n">Downloader</span> <span class="n">to</span> <span class="n">obtain</span> <span class="n">the</span> <span class="n">resource</span><span class="p">:</span>
 
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-6d21a866-0843-419a-83ac-951b3da599b8 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6d21a866-0843-419a-83ac-951b3da599b8');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
+  <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">nltk</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
   
-    </div>
-  </div>
-  </div></div>
+  <span class="n">For</span> <span class="n">more</span> <span class="n">information</span> <span class="n">see</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">nltk</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">html</span>
+
+  <span class="n">Attempted</span> <span class="n">to</span> <span class="n">load</span> <span class="n">tokenizers</span><span class="o">/</span><span class="n">punkt_tab</span><span class="o">/</span><span class="n">english</span><span class="o">/</span>
+
+  <span class="n">Searched</span> <span class="ow">in</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s1">&#39;/root/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/share/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/lib/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/share/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/local/share/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/lib/nltk_data&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;/usr/local/lib/nltk_data&#39;</span>
+<span class="o">**********************************************************************</span>
+</pre></div>
 </div>
+</div>
+</div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">nltk.tokenize</span> <span class="pre">import</span> <span class="pre">sent_tokenize,</span> <span class="pre">word_tokenize</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengimpor fungsi untuk tokenisasi kalimat dan kata dari pustaka NLTK.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">sentences</span> <span class="pre">=</span> <span class="pre">sent_tokenize(article_text)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggunakan <code class="docutils literal notranslate"><span class="pre">sent_tokenize</span></code> untuk membagi teks artikel menjadi daftar kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">terms_per_sentence</span> <span class="pre">=</span> <span class="pre">[word_tokenize(sentence)</span> <span class="pre">for</span> <span class="pre">sentence</span> <span class="pre">in</span> <span class="pre">sentences]</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggunakan <code class="docutils literal notranslate"><span class="pre">word_tokenize</span></code> untuk membagi setiap kalimat menjadi daftar kata atau term.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">extracted_terms</span> <span class="pre">=</span> <span class="pre">[{'Sentence':</span> <span class="pre">sentence,</span> <span class="pre">'Terms':</span> <span class="pre">terms}</span> <span class="pre">for</span> <span class="pre">sentence,</span> <span class="pre">terms</span> <span class="pre">in</span> <span class="pre">zip(sentences,</span> <span class="pre">terms_per_sentence)]</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat daftar dictionary berisi kalimat dan daftar kata yang dihasilkan dari tokenisasi setiap kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">df_terms</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(extracted_terms)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengubah hasil ekstraksi kalimat dan term menjadi DataFrame untuk analisis lebih lanjut.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">df_terms</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan DataFrame yang berisi kalimat dan daftar term yang dihasilkan dari proses tokenisasi.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1328,6 +1349,43 @@ Total jumlah term: 351
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">sentences</span> <span class="pre">=</span> <span class="pre">sent_tokenize(article_text)</span></code></strong></p>
+<ul class="simple">
+<li><p>Memecah teks artikel menjadi daftar kalimat menggunakan fungsi <code class="docutils literal notranslate"><span class="pre">sent_tokenize</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">terms_per_sentence</span> <span class="pre">=</span> <span class="pre">[word_tokenize(sentence)</span> <span class="pre">for</span> <span class="pre">sentence</span> <span class="pre">in</span> <span class="pre">sentences]</span></code></strong></p>
+<ul class="simple">
+<li><p>Tokenisasi setiap kalimat menjadi daftar term menggunakan <code class="docutils literal notranslate"><span class="pre">word_tokenize</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">extracted_terms</span> <span class="pre">=</span> <span class="pre">[{'Sentence':</span> <span class="pre">sentence,</span> <span class="pre">'Terms':</span> <span class="pre">terms,</span> <span class="pre">'Term</span> <span class="pre">Count':</span> <span class="pre">len(terms)}</span> <span class="pre">for</span> <span class="pre">sentence,</span> <span class="pre">terms</span> <span class="pre">in</span> <span class="pre">zip(sentences,</span> <span class="pre">terms_per_sentence)]</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat daftar dictionary berisi kalimat, daftar term, dan jumlah term dari setiap kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">df_terms</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(extracted_terms)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengubah hasil ekstraksi kalimat dan term menjadi DataFrame, termasuk jumlah term per kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">total_terms</span> <span class="pre">=</span> <span class="pre">df_terms['Term</span> <span class="pre">Count'].sum()</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung total jumlah term dari semua kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print(df_terms)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan DataFrame berisi kalimat, term, dan jumlah term.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print(f&quot;Total</span> <span class="pre">jumlah</span> <span class="pre">term:</span> <span class="pre">{total_terms}&quot;)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan total jumlah term yang ditemukan di seluruh artikel.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_filename</span> <span class="o">=</span> <span class="s2">&quot;artikel_mees_hilgers_ekstract_term.csv&quot;</span>
@@ -1350,21 +1408,8 @@ Total jumlah term: 351
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
-  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl.metadata (909 bytes)
-Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">92.2/209.7 kB</span> <span class=" -Color -Color-Red">2.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">3.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: Sastrawi
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed Sastrawi-1.0.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Sastrawi in c:\users\dohan\anaconda3\lib\site-packages (1.0.1)
+Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 </div>
@@ -1409,29 +1454,158 @@ Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
 <span class="n">melted_tfidf</span> <span class="o">=</span> <span class="n">melted_tfidf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;TF-IDF&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Menampilkan hasil</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">melted_tfidf</span><span class="p">)</span>
+<span class="n">melted_tfidf</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                               Sentence        Term    TF-IDF
-254   Selain itu, kemenangan atas Feyenoord akan mem...        atas  0.474210
-2170  Selain itu, ada laga besar lain yang juga mena...  menantinya  0.398786
-2680  Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...    regional  0.384256
-920   Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...    download  0.384256
-200   Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...         app  0.384256
-...                                                 ...         ...       ...
-1943  Jadi, Twente akan bersua Fenerbahce di markasn...        laga  0.137393
-1163  Jadi, Twente akan bersua Fenerbahce di markasn...  fenerbahce  0.137393
-1167  Saat ini, Fenerbahce diperkuat beberapa pemain...  fenerbahce  0.136788
-651   Baca Juga: Hilgers dan Reijnders Bisa Debut sa...         dan  0.130792
-654   Selain itu, kemenangan atas Feyenoord akan mem...         dan  0.130694
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-[296 rows x 3 columns]
-</pre></div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sentence</th>
+      <th>Term</th>
+      <th>TF-IDF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>254</th>
+      <td>Selain itu, kemenangan atas Feyenoord akan mem...</td>
+      <td>atas</td>
+      <td>0.474210</td>
+    </tr>
+    <tr>
+      <th>2170</th>
+      <td>Selain itu, ada laga besar lain yang juga mena...</td>
+      <td>menantinya</td>
+      <td>0.398786</td>
+    </tr>
+    <tr>
+      <th>2680</th>
+      <td>Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...</td>
+      <td>regional</td>
+      <td>0.384256</td>
+    </tr>
+    <tr>
+      <th>920</th>
+      <td>Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...</td>
+      <td>download</td>
+      <td>0.384256</td>
+    </tr>
+    <tr>
+      <th>200</th>
+      <td>Regional\nKategori\nEvent\nDOWNLOAD IDN APP SE...</td>
+      <td>app</td>
+      <td>0.384256</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1943</th>
+      <td>Jadi, Twente akan bersua Fenerbahce di markasn...</td>
+      <td>laga</td>
+      <td>0.137393</td>
+    </tr>
+    <tr>
+      <th>1163</th>
+      <td>Jadi, Twente akan bersua Fenerbahce di markasn...</td>
+      <td>fenerbahce</td>
+      <td>0.137393</td>
+    </tr>
+    <tr>
+      <th>1167</th>
+      <td>Saat ini, Fenerbahce diperkuat beberapa pemain...</td>
+      <td>fenerbahce</td>
+      <td>0.136788</td>
+    </tr>
+    <tr>
+      <th>651</th>
+      <td>Baca Juga: Hilgers dan Reijnders Bisa Debut sa...</td>
+      <td>dan</td>
+      <td>0.130792</td>
+    </tr>
+    <tr>
+      <th>654</th>
+      <td>Selain itu, kemenangan atas Feyenoord akan mem...</td>
+      <td>dan</td>
+      <td>0.130694</td>
+    </tr>
+  </tbody>
+</table>
+<p>296 rows × 3 columns</p>
+</div></div></div>
 </div>
-</div>
-</div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">sentences</span> <span class="pre">=</span> <span class="pre">sent_tokenize(article_text)</span></code></strong></p>
+<ul class="simple">
+<li><p>Memecah teks artikel menjadi daftar kalimat menggunakan fungsi <code class="docutils literal notranslate"><span class="pre">sent_tokenize</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">terms_per_sentence</span> <span class="pre">=</span> <span class="pre">[word_tokenize(sentence)</span> <span class="pre">for</span> <span class="pre">sentence</span> <span class="pre">in</span> <span class="pre">sentences]</span></code></strong></p>
+<ul class="simple">
+<li><p>Melakukan tokenisasi pada setiap kalimat menjadi daftar term menggunakan <code class="docutils literal notranslate"><span class="pre">word_tokenize</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">df_terms['Terms_String']</span> <span class="pre">=</span> <span class="pre">df_terms['Terms'].apply('</span> <span class="pre">'.join)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggabungkan daftar term menjadi string untuk setiap kalimat agar bisa digunakan dalam model TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_vectorizer</span> <span class="pre">=</span> <span class="pre">TfidfVectorizer()</span></code></strong></p>
+<ul class="simple">
+<li><p>Inisialisasi TF-IDF vectorizer.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_matrix</span> <span class="pre">=</span> <span class="pre">tfidf_vectorizer.fit_transform(df_terms['Terms_String'])</span></code></strong></p>
+<ul class="simple">
+<li><p>Melakukan <code class="docutils literal notranslate"><span class="pre">fit</span></code> dan <code class="docutils literal notranslate"><span class="pre">transform</span></code> pada data term menggunakan TF-IDF untuk menghasilkan matriks TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">feature_names</span> <span class="pre">=</span> <span class="pre">tfidf_vectorizer.get_feature_names_out()</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendapatkan nama-nama term yang digunakan sebagai feature dalam model TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(tfidf_matrix.toarray(),</span> <span class="pre">columns=feature_names)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat DataFrame yang berisi nilai-nilai TF-IDF untuk setiap term pada kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">melted_tfidf</span> <span class="pre">=</span> <span class="pre">tfidf_df.melt(id_vars=['Sentence'],</span> <span class="pre">var_name='Term',</span> <span class="pre">value_name='TF-IDF')</span></code></strong></p>
+<ul class="simple">
+<li><p>Melelehkan (melting) DataFrame TF-IDF agar setiap term dan nilainya dapat dilihat per kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">melted_tfidf</span> <span class="pre">=</span> <span class="pre">melted_tfidf[melted_tfidf['TF-IDF']</span> <span class="pre">!=</span> <span class="pre">0]</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus baris yang memiliki nilai TF-IDF nol untuk mempermudah analisis.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">melted_tfidf</span> <span class="pre">=</span> <span class="pre">melted_tfidf.sort_values('TF-IDF',</span> <span class="pre">ascending=False)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengurutkan hasil TF-IDF berdasarkan nilai tertinggi untuk setiap term dalam artikel.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1466,29 +1640,141 @@ Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
 <span class="n">melted_tfidf_terms</span> <span class="o">=</span> <span class="n">melted_tfidf_terms</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;TF-IDF&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Menampilkan hasil</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">melted_tfidf_terms</span><span class="p">)</span>
+<span class="n">melted_tfidf_terms</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Term    TF-IDF
-70     hilgers  0.271851
-32         dan  0.271851
-58  fenerbahce  0.237870
-36          di  0.237870
-97        laga  0.237870
-..         ...       ...
-85      karena  0.033981
-84        juru  0.033981
-83       jumpa  0.033981
-33          de  0.033981
-86    kategori  0.033981
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-[173 rows x 2 columns]
-</pre></div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Term</th>
+      <th>TF-IDF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>70</th>
+      <td>hilgers</td>
+      <td>0.271851</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>dan</td>
+      <td>0.271851</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>fenerbahce</td>
+      <td>0.237870</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>di</td>
+      <td>0.237870</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>laga</td>
+      <td>0.237870</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>karena</td>
+      <td>0.033981</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>juru</td>
+      <td>0.033981</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>jumpa</td>
+      <td>0.033981</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>de</td>
+      <td>0.033981</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>kategori</td>
+      <td>0.033981</td>
+    </tr>
+  </tbody>
+</table>
+<p>173 rows × 2 columns</p>
+</div></div></div>
 </div>
-</div>
-</div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">terms</span> <span class="pre">=</span> <span class="pre">word_tokenize(article_text)</span></code></strong></p>
+<ul class="simple">
+<li><p>Melakukan tokenisasi pada teks artikel menjadi daftar kata (terms) menggunakan <code class="docutils literal notranslate"><span class="pre">word_tokenize</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">terms_string</span> <span class="pre">=</span> <span class="pre">'</span> <span class="pre">'.join(terms)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggabungkan semua term menjadi satu string untuk digunakan sebagai satu dokumen pada model TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_vectorizer_terms</span> <span class="pre">=</span> <span class="pre">TfidfVectorizer()</span></code></strong></p>
+<ul class="simple">
+<li><p>Inisialisasi TF-IDF vectorizer untuk menghitung nilai TF-IDF berdasarkan daftar term.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_matrix_terms</span> <span class="pre">=</span> <span class="pre">tfidf_vectorizer_terms.fit_transform([terms_string])</span></code></strong></p>
+<ul class="simple">
+<li><p>Melakukan <code class="docutils literal notranslate"><span class="pre">fit</span></code> dan <code class="docutils literal notranslate"><span class="pre">transform</span></code> pada string term untuk menghasilkan matriks TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">feature_names_terms</span> <span class="pre">=</span> <span class="pre">tfidf_vectorizer_terms.get_feature_names_out()</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendapatkan nama-nama term (feature) yang digunakan sebagai representasi kata-kata dalam model TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_df_terms</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(tfidf_matrix_terms.toarray(),</span> <span class="pre">columns=feature_names_terms)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat DataFrame yang berisi nilai-nilai TF-IDF untuk setiap term dalam dokumen.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">melted_tfidf_terms</span> <span class="pre">=</span> <span class="pre">tfidf_df_terms.melt(var_name='Term',</span> <span class="pre">value_name='TF-IDF')</span></code></strong></p>
+<ul class="simple">
+<li><p>Melelehkan (melting) DataFrame TF-IDF agar setiap term dan nilainya dapat dilihat dengan lebih jelas.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">melted_tfidf_terms</span> <span class="pre">=</span> <span class="pre">melted_tfidf_terms[melted_tfidf_terms['TF-IDF']</span> <span class="pre">!=</span> <span class="pre">0]</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus baris yang memiliki nilai TF-IDF nol agar hasil lebih fokus pada term yang relevan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">melted_tfidf_terms</span> <span class="pre">=</span> <span class="pre">melted_tfidf_terms.sort_values('TF-IDF',</span> <span class="pre">ascending=False)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengurutkan term berdasarkan nilai TF-IDF tertinggi dalam dokumen artikel.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1530,9 +1816,46 @@ Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9fd1f2c333d2e220b5c22daf7e27a241d0fac6e8fc13fbf6d681f6cb1ae7a44f.png" src="_images/9fd1f2c333d2e220b5c22daf7e27a241d0fac6e8fc13fbf6d681f6cb1ae7a44f.png" />
+<img alt="_images/84d4706d2a7a44c01d487989c1a3537fc362d35bdbde22f27ea613154b045ac3.png" src="_images/84d4706d2a7a44c01d487989c1a3537fc362d35bdbde22f27ea613154b045ac3.png" />
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">cosine_sim_matrix</span> <span class="pre">=</span> <span class="pre">cosine_similarity(tfidf_matrix_terms.T)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung cosine similarity antar terms berdasarkan matriks TF-IDF dan menyimpannya dalam <code class="docutils literal notranslate"><span class="pre">cosine_sim_matrix</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span> <span class="pre">=</span> <span class="pre">np.where((cosine_sim_matrix</span> <span class="pre">&gt;=</span> <span class="pre">threshold_min)</span> <span class="pre">&amp;</span> <span class="pre">(cosine_sim_matrix</span> <span class="pre">&lt;=</span> <span class="pre">threshold_max),</span> <span class="pre">0,</span> <span class="pre">cosine_sim_matrix)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat adjacency matrix, menetapkan nilai 0 pada cosine similarity yang berada di antara threshold 0.1 dan 0.4.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span> <span class="pre">=</span> <span class="pre">np.where((cosine_sim_matrix</span> <span class="pre">&gt;</span> <span class="pre">0.4)</span> <span class="pre">&amp;</span> <span class="pre">(cosine_sim_matrix</span> <span class="pre">&lt;=</span> <span class="pre">0.9),</span> <span class="pre">1,</span> <span class="pre">adjacency_matrix)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menetapkan nilai 1 pada cosine similarity yang berada di antara threshold 0.4 dan 0.9 untuk membentuk hubungan dalam graph.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">nx.Graph()</span></code></strong></p>
+<ul class="simple">
+<li><p>Inisialisasi objek <code class="docutils literal notranslate"><span class="pre">Graph</span></code> dari NetworkX untuk menyimpan node dan edge.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">term</span> <span class="pre">in</span> <span class="pre">feature_names_terms:</span> <span class="pre">G.add_node(term)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menambahkan semua terms sebagai node dalam graph berdasarkan daftar term dari TF-IDF.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(len(feature_names_terms)):</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">range(i</span> <span class="pre">+</span> <span class="pre">1,</span> <span class="pre">len(feature_names_terms)):</span> <span class="pre">if</span> <span class="pre">adjacency_matrix[i,</span> <span class="pre">j]</span> <span class="pre">==</span> <span class="pre">1:</span> <span class="pre">G.add_edge(feature_names_terms[i],</span> <span class="pre">feature_names_terms[j])</span></code></strong></p>
+<ul class="simple">
+<li><p>Menambahkan edge antar terms jika adjacency matrix bernilai 1, yang berarti kedua terms memiliki cosine similarity dalam kisaran yang ditentukan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nx.draw(G,</span> <span class="pre">pos,</span> <span class="pre">with_labels=True,</span> <span class="pre">node_color='skyblue',</span> <span class="pre">edge_color='gray',</span> <span class="pre">node_size=2000,</span> <span class="pre">font_size=12,</span> <span class="pre">font_weight='bold')</span></code></strong></p>
+<ul class="simple">
+<li><p>Memvisualisasikan graph dengan node berwarna biru langit dan edge berwarna abu-abu, serta menampilkan label terms.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung closeness centrality, degree centrality, dan betweenness centrality</span>
@@ -1552,42 +1875,150 @@ Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
 <span class="n">centrality_df</span> <span class="o">=</span> <span class="n">centrality_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Degree Centrality&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Menampilkan hasil</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">centrality_df</span><span class="p">)</span>
+<span class="n">centrality_df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            Term  Closeness Centrality  Degree Centrality  \
-0             10                   1.0                1.0   
-119         oleh                   1.0                1.0   
-111  mengimbangi                   1.0                1.0   
-112       meraih                   1.0                1.0   
-113    merasakan                   1.0                1.0   
-..           ...                   ...                ...   
-59     feyenoord                   1.0                1.0   
-60         filip                   1.0                1.0   
-61          fred                   1.0                1.0   
-62      gilloise                   1.0                1.0   
-172         yang                   1.0                1.0   
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-     Betweenness Centrality  
-0                       0.0  
-119                     0.0  
-111                     0.0  
-112                     0.0  
-113                     0.0  
-..                      ...  
-59                      0.0  
-60                      0.0  
-61                      0.0  
-62                      0.0  
-172                     0.0  
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[173 rows x 4 columns]
-</pre></div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Term</th>
+      <th>Closeness Centrality</th>
+      <th>Degree Centrality</th>
+      <th>Betweenness Centrality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>oleh</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>mengimbangi</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>meraih</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>merasakan</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>feyenoord</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>filip</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>fred</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>gilloise</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>yang</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>173 rows × 4 columns</p>
+</div></div></div>
 </div>
-</div>
-</div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">closeness_centrality</span> <span class="pre">=</span> <span class="pre">nx.closeness_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung closeness centrality untuk setiap node dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">degree_centrality</span> <span class="pre">=</span> <span class="pre">nx.degree_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung degree centrality untuk setiap node dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">betweenness_centrality</span> <span class="pre">=</span> <span class="pre">nx.betweenness_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung betweenness centrality untuk setiap node dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame({...})</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyusun hasil centrality (closeness, degree, betweenness) untuk setiap term (node) dalam graph <code class="docutils literal notranslate"><span class="pre">G</span></code> dan memasukkannya ke dalam DataFrame.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df</span> <span class="pre">=</span> <span class="pre">centrality_df.sort_values('Degree</span> <span class="pre">Centrality',</span> <span class="pre">ascending=False)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengurutkan DataFrame berdasarkan Degree Centrality dari yang tertinggi ke terendah.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df</span></code></strong></p>
+<ul class="simple">
+<li><p>Menampilkan DataFrame yang berisi hasil centrality analysis.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2558,6 +2989,53 @@ Setelah merasakan kekuatan Manchester United, k...                              
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tfidf_wide</span> <span class="pre">=</span> <span class="pre">melted_tfidf.pivot(...)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengubah DataFrame <code class="docutils literal notranslate"><span class="pre">melted_tfidf</span></code> dari format panjang (melted) menjadi format lebar dengan kalimat sebagai indeks dan istilah sebagai kolom, mengisi nilai kosong dengan 0.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">num_sentences</span> <span class="pre">=</span> <span class="pre">len(tfidf_wide)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung jumlah kalimat dalam DataFrame yang telah dipivot.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">matrix_adjacency</span> <span class="pre">=</span> <span class="pre">np.zeros((num_sentences,</span> <span class="pre">num_sentences))</span></code></strong></p>
+<ul class="simple">
+<li><p>Menginisialisasi matriks kosong untuk menyimpan nilai kesamaan antar kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(num_sentences):</span></code></strong></p>
+<ul class="simple">
+<li><p>Memulai loop untuk menghitung kesamaan kosinus antara setiap pasangan kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">similarity</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">-</span> <span class="pre">cosine(tfidf_wide.iloc[i],</span> <span class="pre">tfidf_wide.iloc[j])</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung kesamaan kosinus antara kalimat <code class="docutils literal notranslate"><span class="pre">i</span></code> dan kalimat <code class="docutils literal notranslate"><span class="pre">j</span></code>, di mana nilai 1 berarti identik.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">adjacency_df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(matrix_adjacency,</span> <span class="pre">...)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat DataFrame dari matriks keterhubungan untuk visualisasi yang lebih baik dengan kalimat sebagai indeks dan kolom.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">adjacency_df_thresholded</span> <span class="pre">=</span> <span class="pre">adjacency_df.where(adjacency_df</span> <span class="pre">&gt;</span> <span class="pre">threshold,</span> <span class="pre">0)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengaplikasikan ambang batas untuk mempertimbangkan hanya koneksi yang memiliki kesamaan di atas nilai threshold.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">adjacency_df.to_csv('matrix_adjacency.csv')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyimpan matriks keterhubungan ke dalam file CSV.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">adjacency_df_thresholded.to_csv('matrix_adjacency_thresholded.csv')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyimpan matriks keterhubungan dengan ambang batas ke dalam file CSV.</p></li>
+</ul>
+</li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2674,7 +3152,7 @@ Setelah merasakan kekuatan Manchester United, k...                              
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/799701f255f733ea2afc4a9d7cb42814819048e2a85bf06a8dffa3b9b49ba746.png" src="_images/799701f255f733ea2afc4a9d7cb42814819048e2a85bf06a8dffa3b9b49ba746.png" />
+<img alt="_images/74c18e7f1c0c67c159f73586fb46a987228d900f20ba3e91e77aadbba421bcc9.png" src="_images/74c18e7f1c0c67c159f73586fb46a987228d900f20ba3e91e77aadbba421bcc9.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah node: 20
 Jumlah edge: 128
 Apakah graf terhubung? True
@@ -2723,9 +3201,8 @@ Ukuran Sentralitas:
 16              0.633333                0.003279  
 0               0.612903                0.002947  
 15              0.452381                0.000000  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 kalimat teratas berdasarkan Degree Centrality:
+
+5 kalimat teratas berdasarkan Degree Centrality:
                                               Kalimat  Degree Centrality
 2   Baca Juga: Hilgers dan Reijnders Bisa Debut sa...           0.894737
 3   Bersua Mourinho dan Feyenoord jadi bekal besar...           0.842105
@@ -2752,6 +3229,85 @@ Ukuran Sentralitas:
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">cosine_sim</span> <span class="pre">=</span> <span class="pre">cosine_similarity(tfidf_wide)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung kesamaan kosinus antara kalimat-kalimat menggunakan matriks TF-IDF, menghasilkan matriks kesamaan di mana nilai 1 berarti dua kalimat identik.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">similarity_df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(cosine_sim,</span> <span class="pre">index=tfidf_wide.index,</span> <span class="pre">columns=tfidf_wide.index)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membuat DataFrame dari matriks kesamaan kosinus untuk memudahkan analisis dan visualisasi, dengan kalimat sebagai indeks dan kolom.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">nx.from_pandas_adjacency(similarity_df)</span></code></strong></p>
+<ul class="simple">
+<li><p>Membangun graf dari DataFrame kesamaan, di mana setiap kalimat menjadi node dan edge ditambahkan berdasarkan nilai kesamaan antar kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">G.remove_edges_from(nx.selfloop_edges(G))</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghapus self-loop dari graf untuk memastikan tidak ada hubungan antara sebuah kalimat dengan dirinya sendiri.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">get_largest_component(G):</span></code></strong></p>
+<ul class="simple">
+<li><p>Mendefinisikan fungsi untuk mendapatkan komponen terbesar yang terhubung dalam graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">not</span> <span class="pre">nx.is_connected(G):</span></code></strong></p>
+<ul class="simple">
+<li><p>Memastikan graf terhubung; jika tidak, menambahkan edge antara node terisolasi dan node di komponen terbesar.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">labels</span> <span class="pre">=</span> <span class="pre">{node:</span> <span class="pre">wrap_text(node)</span> <span class="pre">for</span> <span class="pre">node</span> <span class="pre">in</span> <span class="pre">G.nodes()}</span></code></strong></p>
+<ul class="simple">
+<li><p>Mempersiapkan label untuk setiap node (kalimat) dengan membungkus teks agar lebih mudah dibaca saat divisualisasikan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(20,</span> <span class="pre">16))</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengatur ukuran gambar untuk visualisasi graf agar lebih besar dan jelas.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">node_sizes</span> <span class="pre">=</span> <span class="pre">[v</span> <span class="pre">*</span> <span class="pre">10000</span> <span class="pre">for</span> <span class="pre">v</span> <span class="pre">in</span> <span class="pre">degree_centrality.values()]</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung ukuran node berdasarkan derajat centrality untuk menyoroti node yang lebih penting dalam graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nx.draw_networkx_nodes(G,</span> <span class="pre">pos,</span> <span class="pre">node_size=node_sizes,</span> <span class="pre">node_color='lightblue')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menggambar node graf dengan ukuran yang telah ditentukan dan warna yang konsisten.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">plt.savefig('connected_sentence_similarity_graph.png',</span> <span class="pre">dpi=300,</span> <span class="pre">bbox_inches='tight')</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyimpan visualisasi graf ke dalam file gambar dengan resolusi tinggi untuk digunakan dalam presentasi atau laporan.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print(f&quot;Jumlah</span> <span class="pre">node:</span> <span class="pre">{G.number_of_nodes()}&quot;)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mencetak jumlah node dalam graf untuk memberikan gambaran tentang kompleksitas jaringan kalimat.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">closeness_centrality</span> <span class="pre">=</span> <span class="pre">nx.closeness_centrality(G)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menghitung closeness centrality untuk setiap node, yang menunjukkan seberapa dekat suatu node dengan semua node lain dalam graf.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame(centrality_data)</span></code></strong></p>
+<ul class="simple">
+<li><p>Mengumpulkan data centrality ke dalam DataFrame untuk analisis lebih lanjut.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">centrality_df.to_csv('centrality_measures_with_sentences.csv',</span> <span class="pre">index=False)</span></code></strong></p>
+<ul class="simple">
+<li><p>Menyimpan ukuran centrality ke file CSV untuk referensi di masa depan.</p></li>
+</ul>
+</li>
+</ol>
+<p>Link Deployment Ringkasan Teks :</p>
+<p><a class="reference external" href="https://huggingface.co/spaces/drhadityo9/ringkasan_teks">https://huggingface.co/spaces/drhadityo9/ringkasan_teks</a></p>
 </section>
 </section>
 
@@ -2871,8 +3427,8 @@ By Dohan Rizqi Hadityo 210411100195
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
